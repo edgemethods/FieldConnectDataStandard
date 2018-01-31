@@ -1,4 +1,4 @@
 # ITDS
 
 
-[Spot Telemetry Message](01 CloudToDevice/02 CommonFields/CloudTODeviceCommonFields.md)
+[Spot Telemetry Message](01%20CloudToDevice/02%20CommonFields/CloudTODeviceCommonFields.md)
