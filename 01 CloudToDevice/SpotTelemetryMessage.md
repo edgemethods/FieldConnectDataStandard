@@ -12,11 +12,11 @@ JSON object with the following structure:
 * [MessageId](#messageid) ```Int32```
 * [MeasurementDateTime](#measurementdatetime) ```string```
 * ComponentMeasurements ```object[]```
-    * [ComponentCode](#componentMeasurementscomponentcode) ```string``` 
-    * [MeasureDateTime](#componentMeasurementsmeasuredatetime) ```string``` 
+    * [ComponentCode](#componentmeasurementscomponentcode) ```string``` 
+    * [MeasureDateTime](#componentmeasurementsmeasuredatetime) ```string``` 
     * Measurements ```object[]```
         * [Key](#componentmeasurementsmeasurementskey) ```string``` 
-        * [UnitOfMeasure](#componentMeasurementsmeasurementsunitOfMeasure) ```string``` 
+        * [UnitOfMeasure](#componentMeasurementsmeasurementsunitofmeasure) ```string``` 
         * [Value](#componentmeasurementsmeasurementsvalue) ```string``` 
 * [NominalComponentMeasurements](#nominalcomponentmeasurements) ```object[]```
     * [ComponentCode](#nominalcomponentmeasurementscomponentcode) ```string``` 
