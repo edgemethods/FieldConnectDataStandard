@@ -16,7 +16,7 @@ JSON object with the following structure:
     * [MeasureDateTime](#componentmeasurementsmeasuredatetime) ```string``` 
     * Measurements ```object[]```
         * [Key](#componentmeasurementsmeasurementskey) ```string``` 
-        * [UnitOfMeasure](#componentMeasurementsmeasurementsunitofmeasure) ```string``` 
+        * [UnitOfMeasure](#componentmeasurementsmeasurementsunitofmeasure) ```string``` 
         * [Value](#componentmeasurementsmeasurementsvalue) ```string``` 
 * [NominalComponentMeasurements](#nominalcomponentmeasurements) ```object[]```
     * [ComponentCode](#nominalcomponentmeasurementscomponentcode) ```string``` 
@@ -92,11 +92,11 @@ If components are in nominal range, based on settings, component names are liste
 }
 ```
 ## Server-side validations
-1.	MeasurementDateTime: Required. Standard DateTime validation
+1.	[MeasureDateTime](#componentmeasurementsmeasuredatetime): Required. Standard DateTime validation
 2.	ComponentMeasurements can only be empty if NominalComponentMeasurements contains data.
 3.	If ComponentMeasurements exists:
-    1.	ComponentCode: Required.
-    2.	MeasureDateTime: Standard DateTime validation.
+    1.	[ComponentCode](#componentmeasurementscomponentcode): Required.
+    2.	[MeasureDateTime](#componentmeasurementsmeasuredatetime) : Standard DateTime validation.
     3.	Measurements: Required. List cannot be empty.
-        1.	Key: Required.
-        2.	Value: Required.
+        1.	[Key](#componentmeasurementsmeasurementskey): Required.
+        2.	[Value](#componentmeasurementsmeasurementsvalue): Required.

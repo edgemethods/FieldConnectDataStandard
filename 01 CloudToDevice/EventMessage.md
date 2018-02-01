@@ -5,11 +5,14 @@
 ## Logical Contents
 Event name, and datetime of the event, with accompanying data that may be necessary or useful.
 ## Format
-* MessageType
-* Spec
-* DeviceId
-* MessageId
-* ComponentCode
+* [MessageType](#messagetype) ```string```
+* [Spec](#spec) ```string```
+* [DeviceId](#deviceid) ```string```
+* [MessageId](#messageid) ```string```
+* [ComponentCode](#componentcode) ```string```
+* [EventName](#eventname) ```string```
+* [EventDateTime](#eventdatetime) ```string```
+* [Data](#data) ```string```
 
 ### MessageType
 ```string``` = “EventMessage”
@@ -27,6 +30,8 @@ Event name, and datetime of the event, with accompanying data that may be necess
 ```string``` in DateTime Format ```yyyy-MM-ddTHH:mm:ssZ```
 ### Data
 ```string```
+
+Arbitrary data that the device may send up with the machine. Not intended to be parsed by message processing
 ## Sample
 ```JSON
 {
@@ -41,8 +46,8 @@ Event name, and datetime of the event, with accompanying data that may be necess
 }
 ```
 ## Server-side validations
-1.	EventName: Required.
-2.	EventDateTime: Required. Standard DateTime validation.
-3.	ComponentCode: Required. If not against a component, must be ‘Machine’.
+1.	[EventName](#eventname): Required.
+2.	[EventDateTime](#eventdatetime): Required. Standard DateTime validation.
+3.	[ComponentCode](#componentcode): Required. If not against a component, must be ‘Machine’.
 
 
