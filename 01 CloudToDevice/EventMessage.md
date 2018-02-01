@@ -1,7 +1,7 @@
 # Event Message
 ## When
 1.	On the start or end of a process, or
-2.	When the logic controller has determined that an event has happened based on a set of conditions measured by sensors, combined with device state.
+2.	When the device has determined that an event has happened based on a set of conditions measured by sensors, combined with device state.
 ## Logical Contents
 Event name, and datetime of the event, with accompanying data that may be necessary or useful.
 ## Format
@@ -35,14 +35,14 @@ Arbitrary data that the device may send up with the machine. Not intended to be 
 ## Sample
 ```JSON
 {
-  "DeviceId": "OI000002",
+  "DeviceId": "AF000002",
   "Spec": "1.1.0.0",
   "MessageType": "EventMessage",
   "MessageId": 988,
-  "EventName": "off()",
+  "EventName": "DAC started",
   "EventDateTime": "2016-03-12T12:40:42Z",
-  "ComponentCode": "DCU600",
-  "Data": "called"
+  "ComponentCode": "DAC600",
+  "Data": "start params /c=100"
 }
 ```
 ## Server-side validations

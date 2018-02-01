@@ -3,7 +3,7 @@
 1.	On sampling interval determined by device settings
 2.	On any on-demand event where telemetry is required
 ## Logical Contents
-Telemetry data from current sensor data at the reading time. 
+Telemetry data at the time of reading. 
 ## Format
 JSON object with the following structure:
 * [MessageType](#messagetype) ```string```
@@ -23,7 +23,7 @@ JSON object with the following structure:
         
 
 ### MessageType
-```string``` = “EventMessage”
+```string``` = “SpotTelemetryMessage”
 ### Spec
 ```string``` = “1.1.0.0”
 ### DeviceId
