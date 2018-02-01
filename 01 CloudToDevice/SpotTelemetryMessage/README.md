@@ -5,23 +5,22 @@
 ## Logical Contents
 Telemetry data from current sensor data at the reading time. 
 ## Format
-* MessageType
-* Spec
-* DeviceId
-* MessageId
-* MeasurementDateTime
-* ComponentMeasurements
-    * List of
-        * ComponentCode 
-        * MeasureDateTime
-        * Measurements
-            * List of
-                * Key
-                * UnitOfMeasure 
-                * Value
-* NominalComponentMeasurements
-    * List of
-        * ComponentCode 
+JSON object with the following structure:
+* [MessageType](#messagetype) ```string```
+* [Spec](#spec) ```string```
+* [DeviceId](#deviceid) ```string```
+* [MessageId](#messageid) ```Int32```
+* [MeasurementDateTime](#measurementdatetime) ```string```
+* ComponentMeasurements ```object[]```
+    * [ComponentCode](#componentMeasurementscomponentcode) ```string``` 
+    * [MeasureDateTime](#componentMeasurementsmeasuredatetime) ```string``` 
+    * Measurements ```object[]```
+        * [Key](#componentmeasurementsmeasurementskey) ```string``` 
+        * [UnitOfMeasure](#componentMeasurementsmeasurementsunitOfMeasure) ```string``` 
+        * [Value](#componentmeasurementsmeasurementsvalue) ```string``` 
+* [NominalComponentMeasurements](#nominalcomponentmeasurements) ```object[]```
+    * [ComponentCode](#nominalcomponentmeasurementscomponentcode) ```string``` 
+        
 
 ### MessageType
 ```string``` = “EventMessage”
@@ -46,6 +45,8 @@ The list of measurements allows for measurement of different units for a particu
 ### ComponentMeasurements/Measurements/UnitOfMeasure
 ```string```
 UnitOfMeasure is optional if component model contains UnitOfMeasure.
+### ComponentMeasurements/Measurements/Value
+```string``` 
 ### NominalComponentMeasurements
 If components are in nominal range, based on settings, component names are listed. For example, if the nominal operating range is 240V ± 10V, any values recorded in the range will not be detailed, and can be recorded as nominal. This is useful to reduce the amount of unnecessary data sent.
 ### NominalComponentMeasurements/ComponentCode
