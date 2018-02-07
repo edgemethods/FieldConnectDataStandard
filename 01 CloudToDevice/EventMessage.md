@@ -1,9 +1,8 @@
 # Event Message
-## When
-1.	On the start or end of a process, or
-2.	When the device has determined that an event has happened based on a set of conditions measured by sensors, combined with device state.
-## Logical Contents
-Event name, and datetime of the event, with accompanying data that may be necessary or useful.
+## Usage
+Event messages are used to mark when a detected event occurred. Event detection can take place on the device, gateway, or server-side processing. Where events are paired as a start/stop or beginning/end of a process, rather use a component cycle.
+
+There is a risk that event messages are used as a replacement for a log file, where data contained within the message is unstructured, difficult to parse, and ultimately of minimal value. Implementers need to make careful use of event messages to check that they’re not using event messages instead of more appropriate message types.
 ## Format
 * [MessageType](#messagetype) ```string```
 * [Spec](#spec) ```string```
@@ -15,7 +14,7 @@ Event name, and datetime of the event, with accompanying data that may be necess
 * [Data](#data) ```string```
 
 ### MessageType
-```string``` = “EventMessage”
+```string``` = “ErrorsMessage”
 ### Spec
 ```string``` = “1.1.0.0”
 ### DeviceId

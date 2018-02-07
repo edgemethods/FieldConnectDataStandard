@@ -1,9 +1,8 @@
 # Interval Telemetry Message
-## When
-1.	On sampling interval determined by device settings
-2.	On any on-demand event where telemetry is required
-## Logical Contents
-Telemetry that is measured by the device/sensor over a period and provided as a series of functions, such as maximum and average, over that period. 
+## Usage
+The Interval Telemetry Message is used to send telemetry on measurements that are sensitive to misinterpretation because of a long sampling frequency.
+
+The crucial data is contained within the [Functions] structure that is a key-value list of the statistical function executed against the sample. There are no agreed abbreviations to statistical functions, so be careful that function names are consistent and meaningful (e.g. avg, ave, average). A rule of thumb is that that [Function] + [Key] should be meaningful, such as[Avg] [Voltage], [Total] [Movement], [First] [Position].
 ## Format
 * [MessageType](#messagetype) ```string```
 * [Spec](#spec) ```string```
@@ -12,7 +11,7 @@ Telemetry that is measured by the device/sensor over a period and provided as a 
 * Interval ```object```
     * [FromDateTime](#intervalfromdatetime) ```string```
     * [ToDateTime](#intervaltodatetime) ```string```
-* * ComponentMeasurements ```object[]```
+* ComponentMeasurements ```object[]```
     * [ComponentCode](#componentmeasurementscomponentcode) ```string``` 
     * [Measurements](#componentmeasurementsmeasurements) ```object[]```
         * [Key](#componentmeasurementsmeasurementskey) ```string``` 
@@ -38,6 +37,7 @@ Telemetry that is measured by the device/sensor over a period and provided as a 
 ```string``` in DateTime Format ```yyyy-MM-ddTHH:mm:ssZ```
 ### ComponentMeasurements/ComponentCode
 ```string```
+
 Component only needs to match component model if UnitOfMeasure is not populated
 ### ComponentMeasurements/Measurements
 The list of measurements allows for measurement of different units for a particular sensor. For example, resistance (ohm) and the derived temperature (K). This is a useful aid in the diagnostics of sensor calibration.
@@ -45,6 +45,9 @@ The list of measurements allows for measurement of different units for a particu
 ```string``` 
 ### ComponentMeasurements/Measurements/UnitOfMeasure
 ```string```
+
+### ComponentMeasurements/Measurements/SampleCount
+```Int16```
 
 UnitOfMeasure is optional if component model contains UnitOfMeasure.
 ### ComponentMeasurements/Measurements/Functions
@@ -63,9 +66,8 @@ If components are in nominal range, based on settings, component names are liste
 
 ## Sample
 ```JSON
-
 {
-  "DeviceId": "OI000002",
+  "DeviceId": "BR001132",
   "Spec": "1.1.0.0",
   "MessageType": "IntervalTelemetryMessage",
   "MessageId": 0,

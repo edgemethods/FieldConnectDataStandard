@@ -1,8 +1,8 @@
 # Alert Message
-## When
-1.	When the device has determined that a specific alert has occurred.
-## Logical Contents
-Alert name, and datetime of the alert, with accompanying data that may be necessary or useful. 
+## Usage
+Alert messages are sent when the device detects an abnormal or dangerous condition that, at the very least, shuts down equipment or warns the operator. Where the condition is not abnormal or dangerous, consider using an Event Message instead.
+
+The [ActionsTaken] structure is useful for recording what the device/machine/operator did in real time in response to the alert. [ResponseRequired] is used to mark the message for further server-side processing, but this should not be relied upon to effect real-time control.
 ## Format
 * [MessageType](#messagetype) ```string```
 * [Spec](#spec) ```string```

@@ -1,9 +1,8 @@
 # Spot Telemetry Message
-## When
-1.	On sampling interval determined by device settings
-2.	On any on-demand event where telemetry is required
-## Logical Contents
-Telemetry data at the time of reading. 
+## Usage
+The Spot Telemetry Message is the most basic telemetry structure. It records a sensor value at a specific datetime. Component codes are required so as not to land up with meaningless sensor values that are difficult to correlate with other data in downstream processing. Units of measurement are included so that the measurement is clear for downstream processing.
+
+Spot Telemetry suffers from a potential problem that where the measured environment is noisy, or has a non-linear pattern (e.g. AC voltage), the frequency at which spot telemetry is sent could yield meaningless results. Where there may be significant fluctuation over the sampling frequency, consider using Interval Telemetry instead. 
 ## Format
 JSON object with the following structure:
 * [MessageType](#messagetype) ```string```
@@ -14,7 +13,7 @@ JSON object with the following structure:
 * ComponentMeasurements ```object[]```
     * [ComponentCode](#componentmeasurementscomponentcode) ```string``` 
     * [MeasureDateTime](#componentmeasurementsmeasuredatetime) ```string``` 
-    * Measurements ```object[]```
+    * [Measurements](#componentmeasurementsmeasurements) ```object[]```
         * [Key](#componentmeasurementsmeasurementskey) ```string``` 
         * [UnitOfMeasure](#componentmeasurementsmeasurementsunitofmeasure) ```string``` 
         * [Value](#componentmeasurementsmeasurementsvalue) ```string``` 
@@ -44,6 +43,7 @@ The list of measurements allows for measurement of different units for a particu
 ```string``` 
 ### ComponentMeasurements/Measurements/UnitOfMeasure
 ```string```
+
 UnitOfMeasure is optional if component model contains UnitOfMeasure.
 ### ComponentMeasurements/Measurements/Value
 ```string``` 
