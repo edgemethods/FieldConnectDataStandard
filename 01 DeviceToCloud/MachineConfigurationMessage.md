@@ -25,7 +25,7 @@ The list of components attached to a machine, or a model of a machine, is usuall
 
 
 ### MessageType
-```string``` = "BasicDiagnosticMessage"
+```string``` = "MachineConfigurationMessage"
 ### Spec
 ```string``` = “1.1.0.0”
 ### DeviceId

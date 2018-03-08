@@ -17,7 +17,7 @@ While a device can upload a file anywhere, it is important that the chain of tru
 * [FileName](#filename) ```string```
 
 ### MessageType
-```string``` = "BasicDiagnosticMessage"
+```string``` = "FileUploadMessage"
 ### Spec
 ```string``` = “1.1.0.0”
 ### DeviceId

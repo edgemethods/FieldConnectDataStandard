@@ -14,7 +14,7 @@ There is a risk that event messages are used as a replacement for a log file, wh
 * [Data](#data) ```string```
 
 ### MessageType
-```string``` = “ErrorsMessage”
+```string``` = “EventMessage”
 ### Spec
 ```string``` = “1.1.0.0”
 ### DeviceId

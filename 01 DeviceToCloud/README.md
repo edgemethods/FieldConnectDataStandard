@@ -1,6 +1,6 @@
-[Properties](CloudToDeviceProperties.md)
+[Properties](DeviceToCloudProperties.md)
 
-[Common Fields](CloudToDeviceCommonFields.md)
+[Common Fields](DeviceToCloudCommonFields.md)
 
 [Alert Message](AlertMessage.md)
 
@@ -12,6 +12,8 @@
 
 [Current Settings Message](CurrentSettingsMessage.md)
 
+[Entity Tag Message](EntityTagMessage.md)
+
 [Errors Message](ErrorsMessage.md)
 
 [Event Message](EventMessage.md)
@@ -22,6 +24,12 @@
 
 [Interval Event Message](IntervalEventMessage.md)
 
+[Journey Message](JourneyMessage.md)
+
 [Machine Configuration Message](MachineConfigurationMessage.md)
+
+[Machine Location Message](MachineLocationMessage.md)
+
+[Operation Message](OperationMessage.md)
 
 [Spot Telemetry Message](SpotTelemetryMessage.md)
