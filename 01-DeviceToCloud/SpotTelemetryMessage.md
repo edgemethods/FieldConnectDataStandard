@@ -22,9 +22,9 @@ JSON object with the following structure:
         
 
 ### MessageType
-```string``` = “SpotTelemetryMessage”
+```string``` = "SpotTelemetryMessage"
 ### Spec
-```string``` = “1.1.0.0”
+```string``` = "1.1.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -92,11 +92,11 @@ If components are in nominal range, based on settings, component names are liste
 }
 ```
 ## Server-side validations
-1.	[MeasureDateTime](#componentmeasurementsmeasuredatetime): Required. Standard DateTime validation
+1.	[MeasureDateTime](#componentmeasurementsmeasuredatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation)
 2.	ComponentMeasurements can only be empty if NominalComponentMeasurements contains data.
 3.	If ComponentMeasurements exists:
     1.	[ComponentCode](#componentmeasurementscomponentcode): Required.
-    2.	[MeasureDateTime](#componentmeasurementsmeasuredatetime) : Standard DateTime validation.
+    2.	[MeasureDateTime](#componentmeasurementsmeasuredatetime) : [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
     3.	Measurements: Required. List cannot be empty.
         1.	[Key](#componentmeasurementsmeasurementskey): Required.
         2.	[Value](#componentmeasurementsmeasurementsvalue): Required.

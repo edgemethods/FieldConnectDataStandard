@@ -18,7 +18,7 @@ Devices can set calibration values that may be used in downstream analytics. Cal
 ### MessageType
 ```string``` = "CalibrationMessage"
 ### Spec
-```string``` = “1.1.0.0”
+```string``` = "1.1.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -90,7 +90,7 @@ Required
 }
 ```
 ## Server-side validations
-1.	[CalibrationDateTime](#calibrationdatetime): Required. Standard DateTime validation
+1.	[CalibrationDateTime](#calibrationdatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation)
 2.	[ComponentCalibrations](#componentcalibrations): Required
     1.	[ComponentCode](#componentcalibrationscomponentcode): Required. List cannot be empty.
     2.	[Calibrations](#componentcalibrationscalibrations): Required. List cannot be empty.

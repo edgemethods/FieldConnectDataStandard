@@ -20,9 +20,9 @@ The [ActionsTaken] structure is useful for recording what the device/machine/ope
     * [ActionDateTime](#actiondateTime) ```string``` 
 
 ### MessageType
-```string``` = “AlertMessage”
+```string``` = "AlertMessage"
 ### Spec
-```string``` = “1.1.0.0”
+```string``` = "1.1.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -82,10 +82,10 @@ List of actions that may have already taken place on the device in response to t
 
 ```
 ## Server-side validations
-1.	[AlertDateTime](#alertdatetime): Required. Standard DateTime validation.
+1.	[AlertDateTime](#alertdatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
 2.	[AlertMessage](#alertmessage): Required.
 3.	[Severity](#severity): Required.
 4.	[ResponseRequired](#responserequired). If exists, can only be 0 or 1.
 5.	If [ActionsTaken](#ActionsTaken) exists
     1. [Action](#action): Required
-    2. [ActionDateTime](#actiondateTime): Standard DateTime validation.
+    2. [ActionDateTime](#actiondateTime): [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).

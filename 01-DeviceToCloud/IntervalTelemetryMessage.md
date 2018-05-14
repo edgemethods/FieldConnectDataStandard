@@ -24,9 +24,9 @@ The crucial data is contained within the [Functions] structure that is a key-val
     * [ComponentCode](#nominalcomponentmeasurementscomponentcode) ```string``` 
 
 ### MessageType
-```string``` = “IntervalTelemetryMessage”
+```string``` = "IntervalTelemetryMessage"
 ### Spec
-```string``` = “1.1.0.0”
+```string``` = "1.1.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -67,42 +67,137 @@ If components are in nominal range, based on settings, component names are liste
 ## Sample
 ```JSON
 {
-  "DeviceId": "BR001132",
-  "Spec": "1.1.0.0",
   "MessageType": "IntervalTelemetryMessage",
-  "MessageId": 0,
+  "Spec": "1.1.0.0",
+  "DeviceId": "ProtoSaw",
+  "MessageId": "9881",
   "Interval": {
-    "FromDateTime ": "2016-03-11T18:50:48Z",
-    "ToDateTime ": "2016-03-11T18:51:48Z"
+    "FromDateTime": "2018-04-18T00:00:39Z",
+    "ToDateTime": "2018-04-18T00:00:44Z"
   },
-
-  "NominalComponentMeasurements": ["P2", "V12"],
   "ComponentMeasurements": [
     {
-      "ComponentCode": "P2",
-      "SampleCount": "230",
-      "Functions": [
+      "ComponentCode": "Accel",
+      "Measurements": [
         {
-          "Function": "max",
-          "Value": "0.512299"
+          "SampleCount": "221",
+          "Key": "X",
+          "Functions": [
+            {
+              "Function": "max",
+              "Value": "0.1867"
+            },
+            {
+              "Function": "min",
+              "Value": "0.1556"
+            },
+            {
+              "Function": "avg",
+              "Value": "0.1721"
+            },
+            {
+              "Function": "stdev",
+              "Value": "0.0155"
+            }
+          ]
         },
         {
-          "Function": "min",
-          "Value": "0.397775"
+          "SampleCount": "221",
+          "Key": "Y",
+          "Functions": [
+            {
+              "Function": "max",
+              "Value": "-0.0437"
+            },
+            {
+              "Function": "min",
+              "Value": "-0.0754"
+            },
+            {
+              "Function": "avg",
+              "Value": "-0.0656"
+            },
+            {
+              "Function": "stdev",
+              "Value": "0.0146"
+            }
+          ]
         },
         {
-          "Function": "sdev",
-          "Value": "10"
+          "SampleCount": "221",
+          "Key": "Z",
+          "Functions": [
+            {
+              "Function": "max",
+              "Value": "1.0338"
+            },
+            {
+              "Function": "min",
+              "Value": "1.0015"
+            },
+            {
+              "Function": "avg",
+              "Value": "1.0058"
+            },
+            {
+              "Function": "stdev",
+              "Value": "0.0109"
+            }
+          ]
+        },
+        {
+          "SampleCount": "221",
+          "Key": "RSS",
+          "Functions": [
+            {
+              "Function": "max",
+              "Value": "0.2150"
+            },
+            {
+              "Function": "min",
+              "Value": "0.1674"
+            },
+            {
+              "Function": "avg",
+              "Value": "0.1964"
+            },
+            {
+              "Function": "stdev",
+              "Value": "0.0179"
+            }
+          ]
+        },
+        {
+          "SampleCount": "221",
+          "Key": "NOISE",
+          "Functions": [
+            {
+              "Function": "stdev",
+              "Value": "0.0000"
+            },
+            {
+              "Function": "variance",
+              "Value": "0.0000"
+            },
+            {
+              "Function": "sum",
+              "Value": "0.0000"
+            },
+            {
+              "Function": "avg",
+              "Value": "0.0000"
+            }
+          ]
         }
       ]
     }
-  ]
+  ],
 }
 ```
 ## Server-side validations
 1.	Interval: Required
-    1. [FromDateTime](#intervalfromdatetime): Required. Standard DateTime validation.
-    2. [ToDateTime](#intervaltodatetime): Required. Standard DateTime validation.
+    1. [FromDateTime](#intervalfromdatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
+    2. [ToDateTime](#intervaltodatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
     3. [FromDateTime](#intervalfromdatetime) must be less than ToDateTime. 
 2.	ComponentMeasurements can only be empty if [NominalComponentMeasurements](#nominalcomponentmeasurements) contains data.
 3.	If ComponentMeasurements exists:

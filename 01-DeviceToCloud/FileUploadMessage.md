@@ -19,7 +19,7 @@ While a device can upload a file anywhere, it is important that the chain of tru
 ### MessageType
 ```string``` = "FileUploadMessage"
 ### Spec
-```string``` = “1.1.0.0”
+```string``` = "1.1.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -50,7 +50,7 @@ When calling the IoT Hub API, set the filename to be prefixed by a path containi
 ```
 
 ## Server-side validations
-1.	[StartDateTime](#startdatetime): Required. Standard DateTime validation.
-2.	[EndDateTime](#enddatetime): Required. Standard DateTime validation.
+1.	[StartDateTime](#startdatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
+2.	[EndDateTime](#enddatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
 3.	[EndDateTime](#enddatetime) must be greater than StartDateTime.
 4.	[FileName](#filename): Required.

@@ -15,9 +15,9 @@ The Current Settings Message can be used as needed – where configuration has c
     * [Value](#settingsvalue) ```string``` 
 
 ### MessageType
-```string``` = “CurrentSettingsMessage”
+```string``` = "CurrentSettingsMessage"
 ### Spec
-```string``` = “1.1.0.0”
+```string``` = "1.1.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -56,7 +56,7 @@ Settings values, including binary values, must be UTF8 encoded.
 ```
 
 ## Server-side validations
-1.	[DateTime](#datetime): Required. Standard DateTime validation.
+1.	[DateTime](#datetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
 2.	[Settings](#settings): Required. List cannot be empty.
     1. [Key](#settingskey): Required.
     2. [Value](#settingsvalue): Required.

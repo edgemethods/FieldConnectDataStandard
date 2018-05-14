@@ -13,9 +13,9 @@ Device embedded software tends to have some device-side error handling and loggi
     * [Message](#errorsmessage) ```string``` 
 
 ### MessageType
-```string``` = “ErrorsMessage”
+```string``` = "ErrorsMessage"
 ### Spec
-```string``` = “1.1.0.0”
+```string``` = "1.1.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -52,7 +52,7 @@ Device embedded software tends to have some device-side error handling and loggi
 ```
 
 ## Server-side validations
-1.	[DateTime](#datetime): Required. Standard DateTime validation.
+1.	[DateTime](#datetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
 2.	[Errors](#errors): Required. List cannot be empty.
-    1. [DateTime](#errorsdatetime): Required. Standard DateTime validation.
+    1. [DateTime](#errorsdatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
     2. [Message](#errorsmessage): Required.

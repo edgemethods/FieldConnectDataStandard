@@ -1,0 +1,4 @@
+# Compression
+The JSON serialised data can be gzip compressed and the resultant binary data added to the message body. This is important to reduce the amount of data transferred. Gzip compression is more widely adopted than protobuf, messagepack or other serialisation methods and offers the reasonable sized output message (for messages of these types).
+
+Gzip compression is the default behaviour and the service will always try and decompress the message content first. If the message data cannot be compressed, the message property [_Compression_](../01-DeviceToCloud/Properties.md) with the value _Off_ should be set.

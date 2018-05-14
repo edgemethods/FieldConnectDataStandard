@@ -28,9 +28,9 @@ It is encouraged that component cycles are created as close to the edge as possi
 * [ReportOnExpectedState](#reportonexpectedstate) ```byte```
 
 ### MessageType
-```string``` = “ComponentCycleMessage”
+```string``` = "ComponentCycleMessage"
 ### Spec
-```string``` = “1.1.0.0”
+```string``` = "1.1.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -41,7 +41,13 @@ It is encouraged that component cycles are created as close to the edge as possi
 ### CycleState
 ```byte```
 
-Bitwise operators as 1 – Open, 2 - Close, 3 – Open Close
+Possible values:
+
+  1 – Open
+
+  2 - Close
+
+  3 – Open Close
 
 ### CycleIdentifier 
 ```string```
@@ -55,7 +61,7 @@ Used to reconcile two separate open and close messages where a device is unable 
 ```string``` in DateTime Format ```yyyy-MM-ddTHH:mm:ssZ```
 
 ### OpenMessageId
-```string```
+```Int32```
 
 Required where CycleState=2 and CycleIdentifier is not used. A component cycle can be sent in two separate messages, one where CycleState=1 and another where CycleState=2. When two messages are sent the closing message needs to contain the MessageId of the open message, so that the correct cycle is closed off. If an open cycle with the OpenMessageId cannot be found server-side, any open cycles for that component will be closed. A cycle can be closed (CycleState=2) without an open (by not setting OpenMessageId), which will set the component to a (known) off state.
 
@@ -150,18 +156,18 @@ If set to 1, when a CycleState or 1 or 2 (either an open or close), if the serve
 1.	[ComponentCode](#componentcode): Required
 2.	[CycleState](#cyclestate) in [1,2,3]. Required.
 3.	If [CycleState](#cyclestate) = 1
-    1. [OpenDateTime](#opendatetime):  Required. Standard DateTime validation.
+    1. [OpenDateTime](#opendatetime):  Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
 4.	 If [CycleState](#cyclestate) = 2
-    1. [CloseDateTime](#closedatetime):  Required. Standard DateTime validation.
+    1. [CloseDateTime](#closedatetime):  Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
     2. If [CycleIdentifier](#cycleidentifier) is null: OpenMessageId: Required.
 5.	If [CycleState](#cyclestate) = 3
-    1. [OpenDateTime](#opendatetime): Required. Standard DateTime validation.
-    2. [CloseDateTime](#closedatetime):  Required. Standard DateTime validation.
+    1. [OpenDateTime](#opendatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
+    2. [CloseDateTime](#closedatetime):  Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
 6.	If [OpenTriggeringEvent](#opentriggeringevent) not null
     1. [EventName](#opentriggeringeventeventname): Required.
-    2. [EventDateTime](#opentriggeringeventeventdatetime): Required. Standard DateTime validation.
+    2. [EventDateTime](#opentriggeringeventeventdatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
     3. [CycleState](#cyclestate) in [1,3]
 7.	If [CloseTriggeringEvent](#closetriggeringevent) not null
     1. [EventName](#closetriggeringeventeventname): Required.
-    2. [EventDateTime](#closetriggeringeventeventdatetime): Required. Standard DateTime validation.
+    2. [EventDateTime](#closetriggeringeventeventdatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
     3. [CycleState](#cyclestate) in [2,3]

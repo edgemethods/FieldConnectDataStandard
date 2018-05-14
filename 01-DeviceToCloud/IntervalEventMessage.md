@@ -15,9 +15,9 @@ When lots of similar events occur and the device either receives a count from an
     * [Count](#eventcountcount) ```Int32```
 
 ### MessageType
-```string``` = “IntervalEventMessage”
+```string``` = "IntervalEventMessage"
 ### Spec
-```string``` = “1.1.0.0”
+```string``` = "1.1.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -77,8 +77,8 @@ Required
 ```
 ## Server-side validations
 1.	Interval: Required
-    1. [FromDateTime](#intervalfromdatetime): Required. Standard DateTime validation.
-    2. [ToDateTime](#intervaltodatetime): Required. Standard DateTime validation.
+    1. [FromDateTime](#intervalfromdatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
+    2. [ToDateTime](#intervaltodatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
     3. [FromDateTime](#intervalfromdatetime) must be less than ToDateTime. 
 2.	EventCount: Required. List cannot be empty.
     1. [ComponentCode](#eventcountcomponentcode): Required.

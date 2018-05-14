@@ -16,7 +16,7 @@ Tags an entity in the server-side digital twin. Usually created server-side but 
 ### MessageType
 ```string``` = "EntityTagMessage"
 ### Spec
-```string``` = “1.1.0.0”
+```string``` = "1.1.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -59,6 +59,6 @@ Optional
 
 ## Server-side validations
 1. [Entity](#entity): Required
-2. [DateTime](#datetime): Reuqired. Standard DateTime validation.
+2. [DateTime](#datetime): Reuqired. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
 3. [SetTags](#settags) or [ClearTags](#cleartags): Required. Either one can be set, but both cannot be null.
 

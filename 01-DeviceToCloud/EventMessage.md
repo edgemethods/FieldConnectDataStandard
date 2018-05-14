@@ -14,9 +14,9 @@ There is a risk that event messages are used as a replacement for a log file, wh
 * [Data](#data) ```string```
 
 ### MessageType
-```string``` = “EventMessage”
+```string``` = "EventMessage"
 ### Spec
-```string``` = “1.1.0.0”
+```string``` = "1.1.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -46,7 +46,7 @@ Arbitrary data that the device may send up with the machine. Not intended to be 
 ```
 ## Server-side validations
 1.	[EventName](#eventname): Required.
-2.	[EventDateTime](#eventdatetime): Required. Standard DateTime validation.
+2.	[EventDateTime](#eventdatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
 3.	[ComponentCode](#componentcode): Required. If not against a component, must be ‘Machine’.
 
 

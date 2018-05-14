@@ -15,7 +15,7 @@ To record that a named human operator has performed an operation on a machine. F
 ### MessageType
 ```string``` = "OperationMessage"
 ### Spec
-```string``` = “1.1.0.0”
+```string``` = "1.1.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -49,6 +49,6 @@ Optional and can be used to record the specific function, task, process, etc. th
 
 ## Server-side validations
 1. [OperatorCode](#operatorcode): Required
-2. [StartDateTime](#startdatetime): Required. Standard DateTime validation.
-3. [EndDateTime](#startdatetime): Required. Standard DateTime validation.
+2. [StartDateTime](#startdatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
+3. [EndDateTime](#startdatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
 4. [StartDateTime](#startdatetime) must be less than [EndDateTime](#startdatetime). 

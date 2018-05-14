@@ -19,7 +19,7 @@ For the occasional updating of machine location. Mobile assets that need journey
 ### MessageType
 ```string``` = "MachineLocationMessage"
 ### Spec
-```string``` = “1.1.0.0”
+```string``` = "1.1.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -66,6 +66,6 @@ Can be used to record a building location that is manually captured, in cases wh
 ```
 
 ## Server-side validations
-1. [FixedAtDateTime](#fixedatdatetime): Required. Standard DateTime validation.
+1. [FixedAtDateTime](#fixedatdatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
 2. Must contain either (Latitude and Longitude) or (ManualLocation).
 3. If Latitude and Longitude are provided, it must be a valid GPS coordinate (Latitude (+/–)90°, Longitude (+/–)180°)

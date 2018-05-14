@@ -19,9 +19,9 @@ When command messages are sent from the cloud, they can request that a response 
     * [Log](#executionloglog) ```string``` 
 
 ### MessageType
-```string``` = “CommandResponseMessage”
+```string``` = "CommandResponseMessage"
 ### Spec
-```string``` = “1.1.0.0”
+```string``` = "1.1.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -91,9 +91,9 @@ List of log items that may have resulted from the command
 ```
 
 ## Server-side validations
-1.	[DateTime](#datetime): Required. Standard DateTime validation.
+1.	[DateTime](#datetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
 2.	If [CommandIdentifier](#commandidentifier) is null 
     1. [MessageReceivedId](#messagereceivedid): Required.
     2. [ReceivedMessageType](#receivedmessagetype): Required.
-4.	[ExecutionDateTime](#executiondatetime): Required. Standard DateTime validation.
+4.	[ExecutionDateTime](#executiondatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
 5.	[ErrorCode](#errorcode): Required.

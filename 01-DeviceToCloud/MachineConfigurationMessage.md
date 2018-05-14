@@ -27,7 +27,7 @@ The list of components attached to a machine, or a model of a machine, is usuall
 ### MessageType
 ```string``` = "MachineConfigurationMessage"
 ### Spec
-```string``` = “1.1.0.0”
+```string``` = "1.1.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -115,7 +115,7 @@ The component list is a hierarchical structure
 ```
 
 ## Server-side validations
-1.	[DateTime](#datetime): Required. Standard DateTime validation.
+1.	[DateTime](#datetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
 2.	If [Components](#components) not null
     1. [ComponentCode](#componentscomponentcode): Required.
     2. [ComponentName](#componentscomponentname): Required.

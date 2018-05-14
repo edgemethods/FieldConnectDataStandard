@@ -23,7 +23,7 @@ Generally used to record when an asset has *made a journey*, as oppposed to a lo
 ### MessageType
 ```string``` = "JourneyMessage"
 ### Spec
-```string``` = “1.1.0.0”
+```string``` = "1.1.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -112,8 +112,8 @@ Accuracy of the fix in metres. The device should round to nearest metre (to fit 
 ```
 
 ## Server-side validations
-1. [StartDateTime](#startdatetime): Standard DateTime validation.
-2. [EndDateTime](#startdatetime): Standard DateTime validation.
+1. [StartDateTime](#startdatetime): [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
+2. [EndDateTime](#startdatetime): [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
 3. If [EndDateTime](#startdatetime) is null (indicates that this is a multi-message journey)
     1. [Distance](#distance): must be null (has not reached end of journey)
 4. If [StartDateTime](#startdatetime) is null (indicates that this is a multi-message journey)

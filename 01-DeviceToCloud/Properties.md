@@ -1,17 +1,28 @@
-# Properties
+# Common Properties
+Properties can be set on every message that is sent via the messaging protocol (MQTT, AMQP, etc). Properties are used where the content of the message cannot or may not be read.
 
-## Fields Definition 
+* [Compression](#compression) ```string```
+* [Privacy](#privacy) ```int64```
+* [HighImportance](#highimportance) ```byte```
 
-### Compression
-“On” or “Off” to indicate if message content is Gzip compressed
+## Compression
+```string```
 
-Item | Notes
----- | -----
-Data type | ```string```
-Required | Optional. Default – “On”
+"On" or "Off" to indicate if message content is Gzip compressed
+
+### Validation
+* Optional 
+* Default = "On"
 
 ### Privacy
+```int64```
+
 Bit field of the privacy states determined by the device
+
+### Validation
+* Optional 
+* Default = 32
+
 
 Value | State | Description
 ----- | ----- | -----------
@@ -22,66 +33,12 @@ Value | State | Description
 16 | Usage | Indicates that the data can divulge usage information about the person or company. For example, data that records start and stop times of components can be used to derive how much a machine is being used.
 32 |Private | Most data should be marked as private. Even a single sensor would indicate that a machine is in use, and the amount of use can be considered private. Some diagnostic messages, where no sensor readings are sent can be considered not private.
 
-Item | Notes
----- | -----
-Data type | ```Int64```
-Required | Optional. Default value will be added to message during processing
-
 While some questions about the privacy of the data can be derived during server-side processing, the first place that this can be done with any degree of accuracy is within the firmware of the device. If a device sends up data such as the operator name, which is obviously personally identifiable, this needs to be set as a property by the firmware as the server will not necessarily know that personal information is in the payload.
 
 The privacy values must be set as message properties, as this allows for privacy-based routing as soon as possible without even inspecting the message. For example, the IoT hub can be configured to route personal, directly identifiable messages to a completely separate message processing pipeline, if needed.
 During message processing, the privacy property is put into the message body as an attribute of the message.
 
-If the privacy property is not set, the message will be set to a default high privacy value, such as 5 (Personal and Direct Identifiable).
+### HighImportance
+```byte```
 
-### Adjustments
-In cases where devices are sending up incorrect data, due to a fault or firmware bug, it is preferred to adjust the data in order to prevent erroneous measurements or to fail the entire message. This is especially valid when other measurements or parts of the message are valid, and when the rollout of updates to devices takes a long time, so continuous manual resubmission of failed messages cannot be done. The adjustment structure preserves the original data and allows for monitoring and logging of automatic adjustments made.
-
-Adjustments can be made anywhere, including the device, or from a UI, but will mostly be done in an edge or cloud gateway.
-
-#### Format
-
-* List of
-    * AdjustmentDateTime
-    * Processor
-    * ReasonCode
-    * Reason
-    * AdjustmentPropertyPath
-    * OriginalFragment
-
-##### AdjustmentDateTime
-```string``` in DateTime Format ```yyyy-MM-ddTHH:mm:ssZ```
-
-##### Processor
-```string```
-
-##### ReasonCode
-```string```
-
-##### AdjustmentPropertyPath
-```string```
-
-##### OriginalFragment
-```string```
-
-##### Example
-In the example below, a measurement value of 0 is sent, which is not possible, so removed from the measurements.
-```JSON
-"Adjustments": [
-    {
-      
-      "AdjustmentDateTime": "2016-11-03T11:20:43Z",
-      "Processor": "SK-Gateway",
-      "ReasonCode": "SK-Zero-Amps",
-      "Reason": "Heater null amps removed",
-      "AdjustmentPropertyPath": "ComponentMeasurements[2].Measurements[0]",
-      "OriginalFragment": 
-        {
-          "Key": "Phase1",
-          "UnitOfMeasure": "Amps",
-          "Value": "null"
-        }
-    }
-  ]
-```
-
+Allows high importance messages to be routed as soon as possible in the pipeline. Handling of high importance messages is up to the server-side platform. Set to 1 to indicate that the message is of high importance.
