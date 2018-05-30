@@ -35,6 +35,12 @@ The Field Connect Data Standard has its roots in making ‘dumb machines smarter
 ## Getting started
 Most of the specification relates to device-to-cloud telemetry data. Each message type has detail on the schema and an example, which should be self explanatory. Look at the [Common Fields](./01-DeviceToCloud/CommonFields.md) for an understanding of the common fields. Follow that up with looking at a simple message, like an [EventMessage](./01-DeviceToCloud/EventMessage.md), and a complex message, such as [IntervalTelemetryMessage](./01-DeviceToCloud/IntervalTelemetryMessage.md) to see how a range of messages are implemented.
 
+## Sponsor
+Work on the Field Connect Data Standard is sponsored by [EdgeMethods](http://edgemethods.com). EdgeMethods is a UK-based IoT products and services company that focusses on building IoT solutions on the Microsoft IoT platform.
+
+## Contact
+Please use github issues with specific usage questions. For general enquiries contact simon.munro (at) edgemethods.com.
+
 ## Examples
 
 ### EventMessage
