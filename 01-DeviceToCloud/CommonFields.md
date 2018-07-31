@@ -26,6 +26,8 @@ MessageId is a sequential counter of messages on the device. It can be duplicate
 
 MessageId is required for messages originating on the device (Origin=2), but not where messages for a device are generated as a side-effect of processing (server-side, edge gateways, etc.) due to other processes not being able to determine what the next MessageId would be.
 
+Required where [Origin](#origin) = 2 or [Origin](#origin) = null
+
 ## Optional
 
 * [Tags](#tags) ```string[]```
@@ -41,6 +43,15 @@ Tags are set on messages to aid cold analytics. For example, messages can be tag
 ```Int32```
 
 Used for marking of ‘derived’ messages, where the origin of the message is not the active device. Important for understanding (e.g. count statistics) device versus server-side event detection.
+
+Standard origins are listed below. Others can be added as needed.
+  1. Interface board (DAQ)
+  2. Device (default if null)
+  3. Edge gateway
+  4. Cloud gateway
+  5. Server-side near real-time
+  6. Server-side cold analytics
+  7. External systems
 
 ### Adjustments
 ```object[]```
