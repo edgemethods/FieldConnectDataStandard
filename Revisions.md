@@ -22,3 +22,5 @@ Spec | Date      | Notes
 1.0.3.0	| 23 January 2018 |	Added CycleIdentifier to Component Cycle Message
 1.1.0.0	| 30 January 2018 |	BREAKING. Changed ComponentConfigurationMessage to MachineConfigurationMessage. Added machine operation to MachineConfigurationMessage.
 1.1.1.0	| 1 February 2018 |	Removed [Process] from AlertMessage. Removed [Data] from EventIntervalMessage. Added [ExecutionLog] and [CommandIdentifier] to CommandResponseMessage
+1.1.1.1 | 14 May 2018 | Finalised cloud to device messages
+1.1.1.2 | 9 October 2018 | Added optional field MachineSerialNumber to device to cloud common fields.

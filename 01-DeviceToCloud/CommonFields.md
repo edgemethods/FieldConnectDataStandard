@@ -33,6 +33,7 @@ Required where [Origin](#origin) = 2 or [Origin](#origin) = null
 * [Tags](#tags) ```string[]```
 * [Origin](#origin) ```Int32```
 * [Adjustments](#adjustments) ```object```
+* [MachineSerialNumber](#machineserialnumber) ```string[]```
 
 ### Tags
 ```string[]```
@@ -90,3 +91,8 @@ In the example below, a measurement value of null is sent, which is not possible
     }
   ]
 ```
+
+### MachineSerialNumber
+```string[]```
+
+Used when a single device can be used simulaneously or dynamically on multiple machines. For example, a PC that is connected to multiple machines may need to record telemetry for each machine rather than as itself, or a laptop that is plugged in to different machines from time to time. Consider carefully when using this as it may be better to model a single machine with multple components, rather than multiple machines.
