@@ -21,7 +21,7 @@ When command messages are sent from the cloud, they can request that a response 
 ### MessageType
 ```string``` = "CommandResponseMessage"
 ### Spec
-```string``` = "1.1.0.0"
+```string``` = "1.1.1.3"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -68,7 +68,7 @@ List of log items that may have resulted from the command
 ```JSON
 {
   "MessageType": "CommandResponseMessage",
-  "Spec": "1.1.0.0",
+  "Spec": "1.1.1.3",
   "DeviceId": "AB000589",
   "MessageId": 19051,
   "DateTime": "2017-03-12T14:45:22Z",

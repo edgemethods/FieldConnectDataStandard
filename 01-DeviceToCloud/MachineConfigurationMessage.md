@@ -11,6 +11,7 @@ The list of components attached to a machine, or a model of a machine, is usuall
 * [MachineModel](#machinemodel) ```string```
 * [MachineSerialNumber](#machineserialnumber) ```string```
 * [MachineOperation](#machineoperation) ```byte```
+* [UpdateComponentCodeRoot](#updatecomponentroot) ```string``` 
 * [Components](#components) ```object[]```
     * [ComponentCode](#componentscomponentcode) ```string```
     * [PartNumber](#componentspartnumber) ```string```
@@ -22,12 +23,10 @@ The list of components attached to a machine, or a model of a machine, is usuall
         * [Value](#componentspropertiesvalue) ```string```
     * [Components](#components) ```object[]```
 
-
-
 ### MessageType
 ```string``` = "MachineConfigurationMessage"
 ### Spec
-```string``` = "1.1.0.0"
+```string``` = "1.1.1.3"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -48,6 +47,15 @@ Machine information is optional. Adding machine data will force a check and inse
 0 Update – updates the serial number and model of the machine associated with this device. 
 
 1 Add – Adds a new machine and associates this device with that machine.
+### UpdateComponentCodeRoot
+The node in the tree that is is used as the 'root' for updates when partial updates are applied.
+
+If this property is not set, the entire confirguration is updated.
+
+If this property is set, and the component code exists in the tree, the entire 'branch' of the tree is deleted and created from the list in the message.
+
+The UpdateComponentCodeRoot must be the same as the root (and first) item in [Components](#components) list.
+
 ### Components
 ```object[]```
 
@@ -73,7 +81,7 @@ The component list is a hierarchical structure
 ```JSON
 {
   "MessageType": "MachineConfigurationMessage",
-  "Spec": "1.1.0.0",
+  "Spec": "1.1.1.3",
   "DeviceId": "AF0002",
   "MessageId": 101,
   "DateTime": "2016-03-12T12:40:42Z",
@@ -117,7 +125,7 @@ The component list is a hierarchical structure
 ## Server-side validations
 1.	[DateTime](#datetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
 2.	If [Components](#components) not null
-    1. [ComponentCode](#componentscomponentcode): Required.
+    1. [ComponentCode](#componentscomponentcode): Required. Must be unique in the (full tree) MachineConfiguration for the current machine.
     2. [ComponentName](#componentscomponentname): Required.
 3. If [MachineOperation](#machineoperation) not null
     1. [MachineModel](#machinemodel) or [MachineSerialNumber](#machineserialnumber) required

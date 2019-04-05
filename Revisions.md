@@ -24,3 +24,4 @@ Spec | Date      | Notes
 1.1.1.0	| 1 February 2018 |	Removed [Process] from AlertMessage. Removed [Data] from EventIntervalMessage. Added [ExecutionLog] and [CommandIdentifier] to CommandResponseMessage
 1.1.1.1 | 14 May 2018 | Finalised cloud to device messages
 1.1.1.2 | 9 October 2018 | Added optional field MachineSerialNumber to device to cloud common fields.
+1.1.1.3 | 5 April 2019 | Added UpdateComponentCodeRoot to MachineConfigurationMessage

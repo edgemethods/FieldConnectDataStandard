@@ -7,13 +7,13 @@ The [ActionsTaken] structure is useful for recording what the device/machine/ope
 * [MessageType](#messagetype) ```string```
 * [Spec](#spec) ```string```
 * [DeviceId](#deviceid) ```string```
-* [MessageId](#messageid) ```string```
+* [MessageId](#messageid) ```Int32```
 * [AlertDateTime](#alertdatetime) ```string```
 * [AlertName](#alertname) ```string```
 * [AlertMessage](#alertmessage) ```string```
 * [AlertData](#alertdata) ```string```
 * [ComponentCode](#componentcode) ```string```
-* [Severity](#severity) ```string```
+* [Severity](#severity) ```byte```
 * [ResponseRequired](#responserequired) ```string```
 * [ActionsTaken](#ActionsTaken) ```object[]```
     * [Action](#action) ```string```
@@ -22,7 +22,7 @@ The [ActionsTaken] structure is useful for recording what the device/machine/ope
 ### MessageType
 ```string``` = "AlertMessage"
 ### Spec
-```string``` = "1.1.0.0"
+```string``` = "1.1.1.3"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -58,7 +58,7 @@ List of actions that may have already taken place on the device in response to t
 ```JSON
 {
   "DeviceId": "AF000012",
-  "Spec": "1.1.0.0",
+  "Spec": "1.1.1.3",
   "MessageType": "AlertMessage",
   "MessageId": 988,
   "AlertDateTime": "2016-03-12T12:40:42Z",
