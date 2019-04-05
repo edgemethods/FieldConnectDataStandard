@@ -11,7 +11,7 @@ The list of components attached to a machine, or a model of a machine, is usuall
 * [MachineModel](#machinemodel) ```string```
 * [MachineSerialNumber](#machineserialnumber) ```string```
 * [MachineOperation](#machineoperation) ```byte```
-* [UpdateComponentCodeRoot](#updatecomponentroot) ```string``` 
+* [UpdateComponentCodeRoot](#updatecomponentcoderoot) ```string``` 
 * [Components](#components) ```object[]```
     * [ComponentCode](#componentscomponentcode) ```string```
     * [PartNumber](#componentspartnumber) ```string```
