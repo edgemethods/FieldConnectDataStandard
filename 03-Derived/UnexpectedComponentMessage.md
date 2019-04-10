@@ -14,7 +14,7 @@ Because there is a high dependency on ComponentCode, and machine configuration c
 ### MessageType
 ```string``` = UnexpectedComponentMessage
 ### Spec
-```string``` = "1.1.1.3"
+```string``` = "1.1.1.4"
 ### DeviceId
 ```string``` 
 ### DateTime
@@ -32,7 +32,7 @@ Because there is a high dependency on ComponentCode, and machine configuration c
 ```JSON
 {
   "MessageType": "UnexpectedComponentMessage",
-  "Spec": "1.1.1.3",
+  "Spec": "1.1.1.4",
   "DeviceId": "AC2920002",
   "DateTime": "2017-03-12T12:40:42Z",
   "ComponentCode": "HTR",

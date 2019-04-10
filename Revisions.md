@@ -25,3 +25,4 @@ Spec | Date      | Notes
 1.1.1.1 | 14 May 2018 | Finalised cloud to device messages
 1.1.1.2 | 9 October 2018 | Added optional field MachineSerialNumber to device to cloud common fields.
 1.1.1.3 | 5 April 2019 | Added UpdateComponentCodeRoot to MachineConfigurationMessage
+1.1.1.4 | 10 April 2019 | Added key/value list for component units of measure on MachineConfigurationMessage

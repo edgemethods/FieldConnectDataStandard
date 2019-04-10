@@ -17,7 +17,9 @@ The list of components attached to a machine, or a model of a machine, is usuall
     * [PartNumber](#componentspartnumber) ```string```
     * [ComponentName](#componentscomponentname) ```string```
     * [SerialNumber](#componentsserialnumber) ```string```
-    * [UnitsOfMeasure](#componentsunitsofmeasure) ```string```
+    * [UnitsOfMeasure](#componentsunitsofmeasure) ```object[]```
+        * [Key](#componentsunitsofmeasurekey) ```string```
+        * [UnitOfMeasure](#componentsunitsofmeasureunitofmeasure) ```string```
     * [Properties](#componentsproperties) ```object[]```
         * [Key](#componentspropertieskey) ```string```
         * [Value](#componentspropertiesvalue) ```string```
@@ -26,7 +28,7 @@ The list of components attached to a machine, or a model of a machine, is usuall
 ### MessageType
 ```string``` = "MachineConfigurationMessage"
 ### Spec
-```string``` = "1.1.1.3"
+```string``` = "1.1.1.4"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -69,6 +71,12 @@ The component list is a hierarchical structure
 ### Components/SerialNumber
 ```string```
 ### Components/UnitsOfMeasure
+```object[]```
+
+A list of possible units of measure against which telemetry can be sent such as in [SpotTelemetryMessage validation](./SpotTelemetryMessage.md##componentmeasurementsmeasurementsunitofmeasure).
+### Components/UnitsOfMeasure/Key
+```string```
+### Components/UnitsOfMeasure/UnitOfMeasure
 ```string```
 ### Components/Properties
 ```object[]```
@@ -81,7 +89,7 @@ The component list is a hierarchical structure
 ```JSON
 {
   "MessageType": "MachineConfigurationMessage",
-  "Spec": "1.1.1.3",
+  "Spec": "1.1.1.4",
   "DeviceId": "AF0002",
   "MessageId": 101,
   "DateTime": "2016-03-12T12:40:42Z",
@@ -90,7 +98,12 @@ The component list is a hierarchical structure
       "ComponentCode": "Pump001",
       "PartNumber": "AV-RSU-998-Z",
       "ComponentName": "Pump 1",
-      "UnitsOfMeasure": "PSI"
+      "UnitsOfMeasure": [
+        {
+          "Key":"Pressure",
+          "UnitOfMeasure":"PSI"
+        }
+      ]
     },
     {
       "ComponentCode": "RefrigeratorBase",
@@ -99,8 +112,17 @@ The component list is a hierarchical structure
           {
             "ComponentCode": "RB-Pump002",
             "ComponentName": "Refrigerator Base Pump 2",
-	    "SerialNumber": "AF-987EG-0034",
-            "UnitsOfMeasure": "PSI"
+            "SerialNumber": "AF-987EG-0034",
+            "UnitsOfMeasure": [
+              {
+                "Key":"Pressure",
+                "UnitOfMeasure":"PSI"
+              },
+              {
+                "Key":"CurrentDraw",
+                "UnitOfMeasure":"A"
+              }
+            ]
           },
           {
             "ComponentCode": "RB-Valve01",
@@ -129,8 +151,14 @@ The component list is a hierarchical structure
     2. [ComponentName](#componentscomponentname): Required.
 3. If [MachineOperation](#machineoperation) not null
     1. [MachineModel](#machinemodel) or [MachineSerialNumber](#machineserialnumber) required
+    2. Ignored if [UpdateComponentCodeRoot](#updatecomponentcoderoot) is not null
 4. If [MachineModel](#machinemodel) or [MachineSerialNumber](#machineserialnumber) not null
     1. [MachineOperation](#machineoperation) Required
-5. If [Components/Properties](#componentsproperties) not null
+5. If [Components/UnitsOfMeasure](#componentsunitsofmeasure) not null
+    1. [Components/UnitsOfMeasure/Key](#componentsunitsofmeasurekey) Required
+    2. [Components/UnitsOfMeasure/UnitOfMeasure](#componentsunitsofmeasureunitofmeasure) Required
+6. If [Components/Properties](#componentsproperties) not null
     1. [Components/Properties/Key](#componentspropertieskey) Required
     2. [Components/Properties/Value](#componentspropertiesvalue) Required
+7. If [UpdateComponentCodeRoot](#updatecomponentcoderoot) not null
+    1. [Components](#components)[0][ComponentCode](#componentscomponentcode) == [UpdateComponentCodeRoot](#updatecomponentcoderoot) (first item in component list must match update root)

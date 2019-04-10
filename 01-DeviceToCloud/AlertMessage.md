@@ -22,7 +22,7 @@ The [ActionsTaken] structure is useful for recording what the device/machine/ope
 ### MessageType
 ```string``` = "AlertMessage"
 ### Spec
-```string``` = "1.1.1.3"
+```string``` = "1.1.1.4"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -58,7 +58,7 @@ List of actions that may have already taken place on the device in response to t
 ```JSON
 {
   "DeviceId": "AF000012",
-  "Spec": "1.1.1.3",
+  "Spec": "1.1.1.4",
   "MessageType": "AlertMessage",
   "MessageId": 988,
   "AlertDateTime": "2016-03-12T12:40:42Z",

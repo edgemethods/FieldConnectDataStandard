@@ -19,7 +19,7 @@ For the occasional updating of machine location. Mobile assets that need journey
 ### MessageType
 ```string``` = "MachineLocationMessage"
 ### Spec
-```string``` = "1.1.1.3"
+```string``` = "1.1.1.4"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -55,7 +55,7 @@ Can be used to record a building location that is manually captured, in cases wh
 ```JSON
 {
   "MessageType": "MachineLocationMessage",
-  "Spec": "1.1.1.3",
+  "Spec": "1.1.1.4",
   "DeviceId": "AB000002",
   "MessageId": 101,
   "DateTime": "2016-03-12T12:40:42Z",
