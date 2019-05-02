@@ -16,7 +16,7 @@ There is a risk that event messages are used as a replacement for a log file, wh
 ### MessageType
 ```string``` = "EventMessage"
 ### Spec
-```string``` = "1.1.1.4"
+```string``` = "1.2.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -30,12 +30,12 @@ There is a risk that event messages are used as a replacement for a log file, wh
 ### Data
 ```string```
 
-Arbitrary data that the device may send up with the machine. Not intended to be parsed by message processing
+Arbitrary data that the device may send up with the message. Not intended to be parsed by message processing
 ## Sample
 ```JSON
 {
   "DeviceId": "AF000002",
-  "Spec": "1.1.1.4",
+  "Spec": "1.2.0.0",
   "MessageType": "EventMessage",
   "MessageId": 988,
   "EventName": "DAC started",
@@ -47,6 +47,5 @@ Arbitrary data that the device may send up with the machine. Not intended to be 
 ## Server-side validations
 1.	[EventName](#eventname): Required.
 2.	[EventDateTime](#eventdatetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
-3.	[ComponentCode](#componentcode): Required. If not against a component, must be ‘Machine’.
 
 

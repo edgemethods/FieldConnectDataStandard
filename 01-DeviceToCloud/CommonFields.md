@@ -12,7 +12,7 @@
 
 Contains a string of the message type, as per the details in the individual message types specification. e.g. "SpotTelemetryMessage", "EventMessage"
 ### Spec
-```string``` = "1.1.1.4"
+```string``` = "1.2.0.0"
 
 Spec is important for versioning of message processing where breaking changes are made to the standard.
 ### DeviceId
@@ -33,7 +33,7 @@ Required where [Origin](#origin) = 2 or [Origin](#origin) = null
 * [Tags](#tags) ```string[]```
 * [Origin](#origin) ```Int32```
 * [Adjustments](#adjustments) ```object```
-* [MachineSerialNumber](#machineserialnumber) ```string```
+* [ThingIdentifier](#thingidentifier) ```string```
 
 ### Tags
 ```string[]```
@@ -92,7 +92,9 @@ In the example below, a measurement value of null is sent, which is not possible
   ]
 ```
 
-### MachineSerialNumber
+### ThingIdentifier
 ```string```
 
-Used when a single device can be used simulaneously or dynamically on multiple machines. For example, a PC that is connected to multiple machines may need to record telemetry for each machine rather than as itself, or a laptop that is plugged in to different machines from time to time. Consider carefully when using this as it may be better to model a single machine with multple components, rather than multiple machines.
+Used when a single device can be used simulaneously or dynamically on multiple 'things'. For example, a PC (as a device) that is connected to multiple machines may need to record telemetry for each machine rather than as itself, or a laptop that is plugged in to different machines from time to time. Consider carefully when using this as it may be better to model a single 'thing' with multple components, rather than multiple 'things'. 
+
+Be aware that ThingIdentifier is only possible if the device is 'smart' enough to know about things or able to be remotely configured. Often the device only knows about itself, such as a room sensor device that knows it's deviceId, but has no context or knowledge about the room (as a thing). It most cases it is better to rely on server-side device management or fitment to know which device is associated to which 'thing'.

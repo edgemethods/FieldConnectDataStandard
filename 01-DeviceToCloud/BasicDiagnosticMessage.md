@@ -1,6 +1,6 @@
 # Basic Diagnostic Message
 ## Usage
-Particularly with embedded software that is still in development or new, it is useful to send a daily ‘heartbeat’ message to the cloud with some basic information so that the general health of the device can be determined. The basic diagnostic should not be used to send events, settings, or telemetry, but is useful if no external event on the machine is going to trigger a message being sent. 
+Particularly with embedded software that is still in development or new, it is useful to send a daily ‘heartbeat’ message to the cloud with some basic information so that the general health of the device can be determined. The basic diagnostic should not be used to send events, settings, or telemetry, but is useful if no external event on the device is going to trigger a message being sent. 
 
 ## Format
 * [MessageType](#messagetype) ```string```
@@ -15,7 +15,7 @@ Particularly with embedded software that is still in development or new, it is u
 ### MessageType
 ```string``` = "BasicDiagnosticMessage"
 ### Spec
-```string``` = "1.1.1.4"
+```string``` = "1.2.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -34,7 +34,7 @@ Particularly with embedded software that is still in development or new, it is u
 ```JSON
 {
   "MessageType": "BasicDiagnosticMessage",
-  "Spec": "1.1.1.4",
+  "Spec": "1.2.0.0",
   "DeviceId": "AB5489",
   "MessageId": 1091,
   "DateTime": "2016-03-12T12:40:42Z",

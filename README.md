@@ -27,8 +27,7 @@ Some basic points about the implementation that support the objectives.
  * Encourages the use of standard units of measure and properties that are recognisable to engineers.
 
 ## Bias 
-The Field Connect Data Standard has its roots in making ‘dumb machines smarter’. The bias therefore is more towards individual smart machines that are industrial in nature. Some areas that have been explicitly excluded, so far, include:
- * Environments with complex machine taxonomies and/or graph/network relationships between machines, components, and other parts of the system. This means that the Field Connect Data Standard may not fit easily into environments such as fully integrated smart buildings.
+The Field Connect Data Standard has its roots in making ‘dumb machines smarter’. The bias therefore is more towards individual smart 'things' that are industrial in nature. Some areas that have been explicitly excluded, so far, include:
  * Consumer devices. Particularly those that have complex UIs or ones that collect significant personal data.
  * The component and component cycle structures provide enough for basic processes the Field Connect Data Standard does to include a model for complex industrial processes.
 
@@ -49,13 +48,13 @@ The EventMessage is the most basic message to record event data:
 ```JSON
 {
   "MessageType": "EventMessage",
-  "Spec": "1.1.1.4",
+  "Spec": "1.2.0.0",
   "DeviceId": "ProtoSaw",
   "MessageId": "1408",
   "EventDateTime": "2018-05-22T20:35:44+00:00",
   "ComponentCode": "Machine",
   "Data": "Off",
-  "EventName": "Machine On"
+  "EventName": "Turned On"
 }
 ```
 ### IntervalTelemetryMessage
@@ -64,7 +63,7 @@ The IntervalTelemetryMessage is used to record measurements in an interval. An i
 ```JSON
 {
   "MessageType": "IntervalTelemetryMessage",
-  "Spec": "1.1.1.4",
+  "Spec": "1.2.0.0",
   "DeviceId": "ProtoSaw",
   "MessageId": "140973",
   "Interval": {

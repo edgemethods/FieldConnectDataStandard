@@ -1,6 +1,6 @@
 # Unexpected Component Message
 ## Usage
-Because there is a high dependency on ComponentCode, and machine configuration can change frequently, it may be better to generate messages when this validation fails, rather than failing the entire message. The UnexpectedComponentMessage is therefore generated server-side when strong validation is fails against a ComponentCode.
+Because there is a high dependency on ComponentCode, and component structure can change frequently, it may be better to generate messages when this validation fails, rather than failing the entire message. The UnexpectedComponentMessage is therefore generated server-side when strong validation is fails against a ComponentCode.
 ## Format
 * [MessageType](#messagetype) ```string```
 * [Spec](#spec) ```string```
@@ -14,7 +14,7 @@ Because there is a high dependency on ComponentCode, and machine configuration c
 ### MessageType
 ```string``` = UnexpectedComponentMessage
 ### Spec
-```string``` = "1.1.1.4"
+```string``` = "1.2.0.0"
 ### DeviceId
 ```string``` 
 ### DateTime
@@ -32,7 +32,7 @@ Because there is a high dependency on ComponentCode, and machine configuration c
 ```JSON
 {
   "MessageType": "UnexpectedComponentMessage",
-  "Spec": "1.1.1.4",
+  "Spec": "1.2.0.0",
   "DeviceId": "AC2920002",
   "DateTime": "2017-03-12T12:40:42Z",
   "ComponentCode": "HTR",

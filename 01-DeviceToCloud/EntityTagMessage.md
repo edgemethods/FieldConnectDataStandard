@@ -16,7 +16,7 @@ Tags an entity in the server-side digital twin. Usually created server-side but 
 ### MessageType
 ```string``` = "EntityTagMessage"
 ### Spec
-```string``` = "1.1.1.4"
+```string``` = "1.2.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -26,7 +26,7 @@ Tags an entity in the server-side digital twin. Usually created server-side but 
 ### Entity
 ```string``` 
 
-Supported entities are: Customer, Machine, Device
+Example entities are: Customer, Thing, Device
 
 ### SetTags
 ```string[]```
@@ -47,10 +47,10 @@ Optional
 ```JSON
 {
   "MessageType": "EntityTagMessage",
-  "Spec": "1.1.1.4",
+  "Spec": "1.2.0.0",
   "DeviceId": "C000112",
   "MessageId": 501,
-  "Entity": "Machine",
+  "Entity": "Device",
   "DateTime": "2017-03-12T12:40:42Z",
   "SetTags": [ "Installed", "Calibrated" ]
 }

@@ -17,7 +17,7 @@ Should be used sparingly as the lack of structure in the data is prone to faults
 ```string``` = "RemoteInstructionMessage"
 
 ### Spec
-```string``` = "1.1.1.4"
+```string``` = "1.2.0.0"
 
 ### DeviceId
 ```string``` 
@@ -35,7 +35,7 @@ Should be used sparingly as the lack of structure in the data is prone to faults
 ```JSON
 {
   "DeviceId": "AF000012",
-  "Spec": "1.1.1.4",
+  "Spec": "1.2.0.0",
   "MessageType": "RemoteInstructionMessage",
   "CreatedDateTime": "2016-03-12T12:40:42Z",
   "Instruction": "Reset"

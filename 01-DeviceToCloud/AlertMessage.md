@@ -2,7 +2,7 @@
 ## Usage
 Alert messages are sent when the device detects an abnormal or dangerous condition that, at the very least, shuts down equipment or warns the operator. Where the condition is not abnormal or dangerous, consider using an Event Message instead.
 
-The [ActionsTaken] structure is useful for recording what the device/machine/operator did in real time in response to the alert. [ResponseRequired] is used to mark the message for further server-side processing, but this should not be relied upon to effect real-time control.
+The [ActionsTaken] structure is useful for recording what the device/thing/operator did in real time in response to the alert. [ResponseRequired] is used to mark the message for further server-side processing, but this should not be relied upon to effect real-time control.
 ## Format
 * [MessageType](#messagetype) ```string```
 * [Spec](#spec) ```string```
@@ -22,7 +22,7 @@ The [ActionsTaken] structure is useful for recording what the device/machine/ope
 ### MessageType
 ```string``` = "AlertMessage"
 ### Spec
-```string``` = "1.1.1.4"
+```string``` = "1.2.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -58,7 +58,7 @@ List of actions that may have already taken place on the device in response to t
 ```JSON
 {
   "DeviceId": "AF000012",
-  "Spec": "1.1.1.4",
+  "Spec": "1.2.0.0",
   "MessageType": "AlertMessage",
   "MessageId": 988,
   "AlertDateTime": "2016-03-12T12:40:42Z",

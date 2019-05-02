@@ -1,6 +1,6 @@
-# Machine Location Message
+# Location Message
 ## Usage
-For the occasional updating of machine location. Mobile assets that need journeys tracked in detail should not send multiple location messages, but rather a journey message. Can be sent together with an AlertMessage, for location-based responses.
+For the occasional updating of the location of the 'thing' and/or device. Mobile assets that need journeys tracked in detail should not send multiple location messages, but rather a journey message. Can be sent together with an AlertMessage, for location-based responses.
 
 ## Format
 * [MessageType](#messagetype) ```string```
@@ -17,9 +17,9 @@ For the occasional updating of machine location. Mobile assets that need journey
 * [ManualLocation](#manualLocation) ```string```
 
 ### MessageType
-```string``` = "MachineLocationMessage"
+```string``` = "LocationMessage"
 ### Spec
-```string``` = "1.1.1.4"
+```string``` = "1.2.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -54,8 +54,8 @@ Can be used to record a building location that is manually captured, in cases wh
 ## Sample
 ```JSON
 {
-  "MessageType": "MachineLocationMessage",
-  "Spec": "1.1.1.4",
+  "MessageType": "LocationMessage",
+  "Spec": "1.2.0.0",
   "DeviceId": "AB000002",
   "MessageId": 101,
   "DateTime": "2016-03-12T12:40:42Z",

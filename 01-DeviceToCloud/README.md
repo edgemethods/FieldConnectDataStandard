@@ -16,7 +16,7 @@ Most of the message types in the Field Connect Data Standard are device-to-cloud
 
 ## Specialised
 * [Journey Message](JourneyMessage.md)
-* [Machine Location Message](MachineLocationMessage.md)
+* [Location Message](LocationMessage.md)
 * [Operation Message](OperationMessage.md)
 * [Calibration Message](CalibrationMessage.md)
 
@@ -34,4 +34,4 @@ Most of the message types in the Field Connect Data Standard are device-to-cloud
 
 ## Meta-data
 * [Entity Tag Message](EntityTagMessage.md)
-* [Machine Configuration Message](MachineConfigurationMessage.md)
+* [Component Structure Message](ComponentStructureMessage.md)

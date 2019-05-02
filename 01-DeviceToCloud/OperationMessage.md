@@ -1,6 +1,6 @@
 # Operation Message
 ## Usage
-To record that a named human operator has performed an operation on a machine. For example, can be used on devices where a named operator can login to a machine (e.g. IPAF code).
+To record that a named human operator has performed an operation on a 'thing'. For example, can be used on devices where a named operator can login to factory equipment (e.g. IPAF code).
 
 ## Format
 * [MessageType](#messagetype) ```string```
@@ -15,7 +15,7 @@ To record that a named human operator has performed an operation on a machine. F
 ### MessageType
 ```string``` = "OperationMessage"
 ### Spec
-```string``` = "1.1.1.4"
+```string``` = "1.2.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -37,7 +37,7 @@ Optional and can be used to record the specific function, task, process, etc. th
 ```JSON
 {
   "MessageType": "OperationMessage",
-  "Spec": "1.1.1.4",
+  "Spec": "1.2.0.0",
   "DeviceId": "C000112",
   "MessageId": 401,
   "OperatorCode": "59483A",

@@ -19,7 +19,7 @@ While a device can upload a file anywhere, it is important that the chain of tru
 ### MessageType
 ```string``` = "FileUploadMessage"
 ### Spec
-```string``` = "1.1.1.4"
+```string``` = "1.2.0.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -39,7 +39,7 @@ When calling the IoT Hub API, set the filename to be prefixed by a path containi
 ```JSON
 {
   "MessageType": "FileUploadMessage",
-  "Spec": "1.1.1.4",
+  "Spec": "1.2.0.0",
   "DeviceId": "AF000002",
   "MessageId": 101,
   "Reason": "Calibration",
