@@ -33,7 +33,13 @@ While a device can upload a file anywhere, it is important that the chain of tru
 ### FileName
 ```string```
 
-When calling the IoT Hub API, set the filename to be prefixed by a path containing the MessageId, for example the file in the example below would be sent to the API as 101/Calib001.txt. This is in order to allow for the same file(name) to be uploaded multiple times.
+#### Allowable characters
+The characters in the filename are limited, at the very least, by URI naming schemes that are available in RFC 1738, RFC 2616, Section 2.2: Basic Rules and RFC 3987. As a device developer, be cognizant of limitations that downstream systems may have in processing filenames that contain characters that may signify something different of that platform, such as the use of forward slash ("/"), which while a valid filename, may be problematic because downstream systems may treat it as part of a storage folder. Any character that needs to be escaped in a URI scheme is likely to cause downstream problems.
+
+#### Unique filenames
+This data standard does not set guidance for how files are handled server-side, and some server-side processing may overwrite files with the same name, and others may not. If keeping every file is important, try to name the file uniquely. For example, pre- or suffix the filename with the MessageId or a guid, in order to reduce the likelihood of overwritten or rejected files. This is, however, dependent on how the particular server-side processing handles files. Some server-side processing may have mechanisms in place where multiple files with the same name can be stored.
+
+_We have yet to receive a proposal for a property in the message such as "OverwriteExistingFile":1, to attempt to force a file of the same name (and size?) to be overwritten. If you need such a feature, please raise an issue on github._
 
 ## Sample
 ```JSON
