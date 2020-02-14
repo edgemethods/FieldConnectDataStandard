@@ -9,8 +9,8 @@ Generated server-side when the stored component (cycle) state doesn’t match wi
 * [DateTime](#datetime) ```string```
 * [ComponentCode](#componentcode) ```string```
 * [StoredState](#sourcemessageid) ```string```
-* [RequestedCycleState ](#sourcemessagetype) ```byte```
-* [ComponentCycleMessageId ](#componentcyclemessageid) ```Int32```
+* [RequestedCycleState](#sourcemessagetype) ```byte```
+* [ComponentCycleMessageId](#componentcyclemessageid) ```Int32```
 
 ### MessageType
 ```string``` = UnexpectedStateMessage
@@ -40,7 +40,7 @@ Possible values:
   3 – Open Close
 
 ### ComponentCycleMessageId
-```string``` 
+```Int32``` 
 
 MessageId of the ComponentCycleMessage
 
@@ -53,7 +53,7 @@ MessageId of the ComponentCycleMessage
   "MessageId": 984,
   "ComponentCode": "HTR",
   "StoredState": "On",
-  "RequestedState": 1,
-  "CurrentStateMessageId": 23459
+  "RequestedCycleState": 1,
+  "ComponentCycleMessageId": 23459
 }
 ```

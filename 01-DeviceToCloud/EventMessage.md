@@ -7,7 +7,7 @@ There is a risk that event messages are used as a replacement for a log file, wh
 * [MessageType](#messagetype) ```string```
 * [Spec](#spec) ```string```
 * [DeviceId](#deviceid) ```string```
-* [MessageId](#messageid) ```string```
+* [MessageId](#messageid) ```Int32```
 * [ComponentCode](#componentcode) ```string```
 * [EventName](#eventname) ```string```
 * [EventDateTime](#eventdatetime) ```string```

@@ -5,7 +5,7 @@
 * [MessageType](#messagetype) ```string```
 * [Spec](#spec) ```string```
 * [DeviceId](#deviceid) ```string```
-* [MessageId](#messageid) ```string```
+* [MessageId](#messageid) ```Int32```
 
 ### MessageType
 ```string``` 
