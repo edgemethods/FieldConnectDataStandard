@@ -16,7 +16,7 @@ There is a risk that event messages are used as a replacement for a log file, wh
 ### MessageType
 ```string``` = "EventMessage"
 ### Spec
-```string``` = "1.2.0.0"
+```string``` = "1.2.0.1"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -35,7 +35,7 @@ Arbitrary data that the device may send up with the message. Not intended to be 
 ```JSON
 {
   "DeviceId": "AF000002",
-  "Spec": "1.2.0.0",
+  "Spec": "1.2.0.1",
   "MessageType": "EventMessage",
   "MessageId": 988,
   "EventName": "DAC started",

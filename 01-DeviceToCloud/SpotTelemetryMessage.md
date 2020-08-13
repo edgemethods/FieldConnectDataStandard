@@ -24,7 +24,7 @@ JSON object with the following structure:
 ### MessageType
 ```string``` = "SpotTelemetryMessage"
 ### Spec
-```string``` = "1.2.0.0"
+```string``` = "1.2.0.1"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -55,7 +55,7 @@ If components are in nominal range, based on settings, component names are liste
 ```JSON
 {
   "DeviceId": "AX000002",
-  "Spec": "1.2.0.0",
+  "Spec": "1.2.0.1",
   "MessageType": "SpotTelemetryMessage",
   "MessageId": 0,
   "MeasurementDateTime": "2016-11-03T11:20:43Z",

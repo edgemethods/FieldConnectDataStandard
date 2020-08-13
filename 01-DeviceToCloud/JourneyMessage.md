@@ -23,7 +23,7 @@ Generally used to record when an asset has *made a journey*, as oppposed to a lo
 ### MessageType
 ```string``` = "JourneyMessage"
 ### Spec
-```string``` = "1.2.0.0"
+```string``` = "1.2.0.1"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -86,7 +86,7 @@ Accuracy of the fix in metres. The device should round to nearest metre (to fit 
 ```JSON
 {
   "MessageType": "JourneyMessage",
-  "Spec": "1.2.0.0",
+  "Spec": "1.2.0.1",
   "DeviceId": "AB000002",
   "MessageId": 101,
   "StartDateTime": "2016-03-21T13:43:55Z",

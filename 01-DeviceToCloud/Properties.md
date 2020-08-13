@@ -4,6 +4,8 @@ Properties can be set on every message that is sent via the messaging protocol (
 * [Compression](#compression) ```string```
 * [Privacy](#privacy) ```int64```
 * [HighImportance](#highimportance) ```byte```
+* [OwnershipDomain](#ownershipdomian) ```string```
+
 
 ## Compression
 ```string```
@@ -42,3 +44,8 @@ During message processing, the privacy property is put into the message body as 
 ```byte```
 
 Allows high importance messages to be routed as soon as possible in the pipeline. Handling of high importance messages is up to the server-side platform. Set to 1 to indicate that the message is of high importance.
+
+### OwnershipDomain
+```string```
+
+Used to indicate the stakeholder ownership of data within a specific message, whether originating device- or server-side. For example, the ownership domain could be 'Operator' or 'End User' to distinguish that the data is not telemetry that is _notionally_ owned by the supplier or owner of the device. This exists as a property so that data in a specific OwnershipDomain can be immediately routed within IoT Hub (at least) without data needed to be parsed or 'opened' at all.
