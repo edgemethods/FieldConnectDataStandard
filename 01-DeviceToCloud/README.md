@@ -35,3 +35,4 @@ Most of the message types in the Field Connect Data Standard are device-to-cloud
 ## Meta-data
 * [Entity Tag Message](EntityTagMessage.md)
 * [Component Structure Message](ComponentStructureMessage.md)
+* [Thing Affected Log Message](ThingAffectedLogMessage.md)
