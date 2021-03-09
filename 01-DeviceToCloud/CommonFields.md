@@ -12,13 +12,16 @@
 
 Contains a string of the message type, as per the details in the individual message types specification. e.g. "SpotTelemetryMessage", "EventMessage"
 ### Spec
-```string``` = "1.2.0.1"
+```string``` = "1.2.1.0"
 
 Spec is important for versioning of message processing where breaking changes are made to the standard.
 ### DeviceId
 ```string``` 
 
-Uniquely identifies each device on IoT service. On Azure IoT Hub, this needs to match with the [DeviceId]. 
+Uniquely identifies each device on IoT service. On Azure IoT Hub, this needs to match with the [DeviceId].
+
+Required where [Origin](#origin) in [1,2,3,4]
+
 ### MessageId
 ```Int32```
 

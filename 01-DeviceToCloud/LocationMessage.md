@@ -19,7 +19,7 @@ For the occasional updating of the location of the 'thing' and/or device. Mobile
 ### MessageType
 ```string``` = "LocationMessage"
 ### Spec
-```string``` = "1.2.0.1"
+```string``` = "1.2.1.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -55,7 +55,7 @@ Can be used to record a building location that is manually captured, in cases wh
 ```JSON
 {
   "MessageType": "LocationMessage",
-  "Spec": "1.2.0.1",
+  "Spec": "1.2.1.0",
   "DeviceId": "AB000002",
   "MessageId": 101,
   "DateTime": "2016-03-12T12:40:42Z",

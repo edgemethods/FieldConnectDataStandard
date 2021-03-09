@@ -8,7 +8,8 @@ The list of components attached to a 'thing', is usually administered in the clo
 * [DeviceId](#deviceid) ```string```
 * [MessageId](#messageid) ```Int32```
 * [DateTime](#datetime) ```string```
-* [UpdateComponentCodeRoot](#updatecomponentcoderoot) ```string``` 
+* [UpdateComponentCodeRoot](#updatecomponentcoderoot) ```string```
+* [StructureInstance](#structureinstance) ```string```
 * [Components](#components) ```object[]```
     * [ComponentCode](#componentscomponentcode) ```string```
     * [PartNumber](#componentspartnumber) ```string```
@@ -25,14 +26,22 @@ The list of components attached to a 'thing', is usually administered in the clo
 ### MessageType
 ```string``` = "ComponentStructureMessage"
 ### Spec
-```string``` = "1.2.0.1"
+```string``` = "1.2.1.0"
 ### DeviceId
 ```string``` 
 ### MessageId
 ```Int32```
 ### DateTime
 ```string``` in DateTime Format ```yyyy-MM-ddTHH:mm:ssZ```
+### StructureInstance
+```string```
+
+Used where things have multiple component structures, such as device-side component structure and server-side health structure.
+
+If null or empty, will be set to 'Default'
 ### UpdateComponentCodeRoot
+```string```
+
 The node in the tree that is is used as the 'root' for updates when partial updates are applied.
 
 If this property is not set, the entire confirguration is updated.
@@ -72,7 +81,7 @@ A list of possible units of measure against which telemetry can be sent such as 
 ```JSON
 {
   "MessageType": "ComponentStructureMessage",
-  "Spec": "1.2.0.1",
+  "Spec": "1.2.1.0",
   "DeviceId": "AF0002",
   "MessageId": 101,
   "DateTime": "2016-03-12T12:40:42Z",

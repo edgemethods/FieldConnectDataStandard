@@ -18,7 +18,7 @@ Devices can set calibration values that may be used in downstream analytics. Cal
 ### MessageType
 ```string``` = "CalibrationMessage"
 ### Spec
-```string``` = "1.2.0.1"
+```string``` = "1.2.1.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -60,7 +60,7 @@ Required
 ```JSON
 {
   "DeviceId": "AX000002",
-  "Spec": "1.2.0.1",
+  "Spec": "1.2.1.0",
   "MessageType": "CalibrationMessage",
   "MessageId": 120,
   "CalibrationDateTime": "2016-11-03T11:20:43Z",
