@@ -30,7 +30,7 @@ It is encouraged that component cycles are created as close to the edge as possi
 ### MessageType
 ```string``` = "ComponentCycleMessage"
 ### Spec
-```string``` = "1.2.1.0"
+```string``` = "1.2.2.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -111,7 +111,7 @@ If set to 1, when a CycleState or 1 or 2 (either an open or close), if the serve
 ```JSON
 {
   "MessageType": "ComponentCycleMessage",
-  "Spec": "1.2.1.0",
+  "Spec": "1.2.2.0",
   "DeviceId": "P00122",
   "MessageId": 984,
   "ComponentCode": "Boom",
@@ -129,7 +129,7 @@ If set to 1, when a CycleState or 1 or 2 (either an open or close), if the serve
 ```JSON
 {
   "MessageType": "ComponentCycleMessage",
-  "Spec": "1.2.1.0",
+  "Spec": "1.2.2.0",
   "DeviceId": "P00122",
   "MessageId": 1055,
   "ComponentCode": "Boom",
@@ -142,7 +142,7 @@ If set to 1, when a CycleState or 1 or 2 (either an open or close), if the serve
 ```JSON
 {
   "MessageType": "ComponentCycleMessage",
-  "Spec": "1.2.1.0",
+  "Spec": "1.2.2.0",
   "DeviceId": "P00122",
   "MessageId": 1095,
   "ComponentCode": "Motor",

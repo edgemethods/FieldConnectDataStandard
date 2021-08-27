@@ -11,7 +11,7 @@ Generated when a potential fault is detected by server-side processes. Because t
 ### MessageType
 ```string``` = "SuspectDeviceMessage"
 ### Spec
-```string``` = "1.2.1.0"
+```string``` = "1.2.2.0"
 ### DeviceId
 ```string``` 
 ### DateTime
@@ -27,7 +27,7 @@ Can be a process or function name, or a user name if suspicion is picked up manu
 ```JSON
 {
   "MessageType": "SuspectDeviceMessage",
-  "Spec": "1.2.1.0",
+  "Spec": "1.2.2.0",
   "DeviceId": "AC2920002",
   "DateTime": "2018-03-12T12:40:52Z",
   "Suspector": "Gateway/Validation",

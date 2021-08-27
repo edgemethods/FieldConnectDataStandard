@@ -26,7 +26,7 @@ The crucial data is contained within the [Functions] structure that is a key-val
 ### MessageType
 ```string``` = "IntervalTelemetryMessage"
 ### Spec
-```string``` = "1.2.1.0"
+```string``` = "1.2.2.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -68,7 +68,7 @@ If components are in nominal range, based on settings, component names are liste
 ```JSON
 {
   "MessageType": "IntervalTelemetryMessage",
-  "Spec": "1.2.1.0",
+  "Spec": "1.2.2.0",
   "DeviceId": "ProtoSaw",
   "MessageId": "9881",
   "Interval": {

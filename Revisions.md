@@ -29,3 +29,4 @@ Spec | Date      | Notes
 1.2.0.0 | 24 April 2019 | Important update to remove dependency on 'Machine'. Replaced MachineSerialNumber with ThingIdentifier in common fields. Removed ComponentCode validation on EventMessage. Removed MachineConfigurationMessage and replaced with ComponentStructureMessage.
 1.2.0.1 | 11 August 2020 | Added [OwnershipDomain] to device to cloud properties
 1.2.1.0 | 9 March 2021 | Added ThingAffectedLogMessage
+1.2.2.0 | 19 August 2021 | Added RelayMessage and SystemTestMessage

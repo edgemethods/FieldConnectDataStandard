@@ -48,7 +48,7 @@ The EventMessage is the most basic message to record event data:
 ```JSON
 {
   "MessageType": "EventMessage",
-  "Spec": "1.2.1.0",
+  "Spec": "1.2.2.0",
   "DeviceId": "ProtoSaw",
   "MessageId": "1408",
   "EventDateTime": "2018-05-22T20:35:44+00:00",
@@ -63,7 +63,7 @@ The IntervalTelemetryMessage is used to record measurements in an interval. An i
 ```JSON
 {
   "MessageType": "IntervalTelemetryMessage",
-  "Spec": "1.2.1.0",
+  "Spec": "1.2.2.0",
   "DeviceId": "ProtoSaw",
   "MessageId": "140973",
   "Interval": {

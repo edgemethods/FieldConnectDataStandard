@@ -15,7 +15,7 @@ Used to send a command to the device to get it into a known debugging state that
 ```string``` = "DebugStateMessage"
 
 ### Spec
-```string``` = "1.2.1.0"
+```string``` = "1.2.2.0"
 
 ### DeviceId
 ```string``` 
@@ -32,7 +32,7 @@ Default = 0 – Not debugging. 1+ platform-specific debug states.
 ```JSON
 {
   "DeviceId": "AF000012",
-  "Spec": "1.2.1.0",
+  "Spec": "1.2.2.0",
   "MessageType": "DebugStateMessage",
   "CreatedDateTime": "2016-03-12T12:40:42Z",
   "DebugState": 3
