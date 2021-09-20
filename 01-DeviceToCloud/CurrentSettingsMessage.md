@@ -17,7 +17,7 @@ The Current Settings Message can be used as needed – where configuration has c
 ### MessageType
 ```string``` = "CurrentSettingsMessage"
 ### Spec
-```string``` = "1.2.2.0"
+```string``` = "1.2.3.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -38,7 +38,7 @@ Settings values, including binary values, must be UTF8 encoded.
 ```JSON
 {
   "MessageType": "CurrentSettingsMessage",
-  "Spec": "1.2.2.0",
+  "Spec": "1.2.3.0",
   "DeviceId": "OI000002",
   "MessageId": 101,
   "DateTime": "2016-03-12T12:40:42Z",

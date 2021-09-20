@@ -30,3 +30,4 @@ Spec | Date      | Notes
 1.2.0.1 | 11 August 2020 | Added [OwnershipDomain] to device to cloud properties
 1.2.1.0 | 9 March 2021 | Added ThingAffectedLogMessage
 1.2.2.0 | 19 August 2021 | Added RelayMessage and SystemTestMessage
+1.2.3.0 | 20 September 2021 | Changes on CommonFields to support user-generated telemetry

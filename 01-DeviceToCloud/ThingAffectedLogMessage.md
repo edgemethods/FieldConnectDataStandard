@@ -21,7 +21,7 @@ Most of the time data changes that affect the thing are server-side activities, 
 ### MessageType
 ```string``` = "ThingAffectedLogMessage"
 ### Spec
-```string``` = "1.2.2.0"
+```string``` = "1.2.3.0"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -39,7 +39,7 @@ Friendly name for the application, source event, or source system that triggered
 ### Processor
 ```string```
 
-Details on the specific processor that transacted the change. Could be an Azure function name, or app url.
+Details on the specific processor that transacted the change. Could be a function name, or app url.
 ### Summary
 ```string```
 
@@ -56,12 +56,11 @@ When things are changed by users in apps, it is encouraged that upns are recorde
 ### Tags
 
 Used to be able to filter potentially long lists of affected log messages.
-
 ## Sample
 ```JSON
 {
   "MessageType": "ThingAffectedLogMessage",
-  "Spec": "1.2.2.0",
+  "Spec": "1.2.3.0",
   "DeviceId": "AF-DEV-001",
   "DateTime": "2020-03-12T12:40:42Z",
   "ThingIdentifier": "AF000002",
@@ -72,6 +71,7 @@ Used to be able to filter potentially long lists of affected log messages.
 }
 ```
 ## Server-side validations
-1.	[ThingIdentifier](#thingidentifier): Required.
-2.	[DateTime](#datetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
-3.  [Summary](#summary): Required
+1. [ThingIdentifier](#thingidentifier): Required.
+2. [DateTime](#datetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
+3. [Summary](#summary): Required
+4. Either [Upn](#upn) or [Processor](#processor) need to be non-null

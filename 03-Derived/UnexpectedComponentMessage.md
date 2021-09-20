@@ -14,7 +14,7 @@ Because there is a high dependency on ComponentCode, and component structure can
 ### MessageType
 ```string``` = UnexpectedComponentMessage
 ### Spec
-```string``` = "1.2.2.0"
+```string``` = "1.2.3.0"
 ### DeviceId
 ```string``` 
 ### DateTime
@@ -32,7 +32,7 @@ Because there is a high dependency on ComponentCode, and component structure can
 ```JSON
 {
   "MessageType": "UnexpectedComponentMessage",
-  "Spec": "1.2.2.0",
+  "Spec": "1.2.3.0",
   "DeviceId": "AC2920002",
   "DateTime": "2017-03-12T12:40:42Z",
   "ComponentCode": "HTR",
