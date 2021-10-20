@@ -15,7 +15,7 @@ Generated server-side when the stored component (cycle) state doesn’t match wi
 ### MessageType
 ```string``` = UnexpectedStateMessage
 ### Spec
-```string``` = "1.2.3.0"
+```string``` = "1.2.3.1"
 ### DeviceId
 ```string``` 
 ### DateTime
@@ -48,7 +48,7 @@ MessageId of the ComponentCycleMessage
 ```JSON
 {
   "MessageType": "UnexpectedStateMessage",
-  "Spec": "1.2.3.0",
+  "Spec": "1.2.3.1",
   "DeviceId": "AC2920002",
   "MessageId": 984,
   "ComponentCode": "HTR",

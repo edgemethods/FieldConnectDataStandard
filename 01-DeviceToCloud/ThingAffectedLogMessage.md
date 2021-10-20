@@ -21,7 +21,7 @@ Most of the time data changes that affect the thing are server-side activities, 
 ### MessageType
 ```string``` = "ThingAffectedLogMessage"
 ### Spec
-```string``` = "1.2.3.0"
+```string``` = "1.2.3.1"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -54,13 +54,14 @@ Used to hold data about the change that allows it to be detailed or rolled back.
 
 When things are changed by users in apps, it is encouraged that upns are recorded so that people can be approached to understand why a thing was changed.
 ### Tags
+```string[]```
 
 Used to be able to filter potentially long lists of affected log messages.
 ## Sample
 ```JSON
 {
   "MessageType": "ThingAffectedLogMessage",
-  "Spec": "1.2.3.0",
+  "Spec": "1.2.3.1",
   "DeviceId": "AF-DEV-001",
   "DateTime": "2020-03-12T12:40:42Z",
   "ThingIdentifier": "AF000002",

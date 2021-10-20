@@ -19,7 +19,7 @@ Relay messages contain arbitrary (JSON) data that has additonal data standard-ce
 ### MessageType
 ```string``` = "RelayMessage"
 ### Spec
-```string``` = "1.2.3.0"
+```string``` = "1.2.3.1"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -36,7 +36,7 @@ Required. Used for describe the schema or type of message.
 ```JSON
 {
   "MessageType": "RelayMessage",
-  "Spec": "1.2.3.0",
+  "Spec": "1.2.3.1",
   "DeviceId": "AF-DEV-001",
   "DateTime": "2020-03-12T12:40:42Z",
   "ThingIdentifier": "AF000002",

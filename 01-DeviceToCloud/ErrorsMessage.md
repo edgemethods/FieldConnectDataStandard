@@ -15,7 +15,7 @@ Device embedded software tends to have some device-side error handling and loggi
 ### MessageType
 ```string``` = "ErrorsMessage"
 ### Spec
-```string``` = "1.2.3.0"
+```string``` = "1.2.3.1"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -34,7 +34,7 @@ Device embedded software tends to have some device-side error handling and loggi
 ```JSON
 {
   "MessageType": "ErrorsMessage",
-  "Spec": "1.2.3.0",
+  "Spec": "1.2.3.1",
   "DeviceId": "AB000589",
   "MessageId": 1991,
   "DateTime": "2017-03-12T14:45:22Z",
