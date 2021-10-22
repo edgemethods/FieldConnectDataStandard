@@ -26,7 +26,7 @@ The list of components attached to a 'thing', is usually administered in the clo
 ### MessageType
 ```string``` = "ComponentStructureMessage"
 ### Spec
-```string``` = "1.2.1.0"
+```string``` = "1.2.3.1"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -81,7 +81,7 @@ A list of possible units of measure against which telemetry can be sent such as 
 ```JSON
 {
   "MessageType": "ComponentStructureMessage",
-  "Spec": "1.2.1.0",
+  "Spec": "1.2.3.1",
   "DeviceId": "AF0002",
   "MessageId": 101,
   "DateTime": "2016-03-12T12:40:42Z",

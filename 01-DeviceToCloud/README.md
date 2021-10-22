@@ -13,12 +13,14 @@ Most of the message types in the Field Connect Data Standard are device-to-cloud
 * [Alert Message](AlertMessage.md)
 * [Event Message](EventMessage.md)
 * [Interval Event Message](IntervalEventMessage.md)
+* [Field Service Event Message](FieldServiceEvent.md)
 
 ## Specialised
 * [Journey Message](JourneyMessage.md)
 * [Location Message](LocationMessage.md)
 * [Operation Message](OperationMessage.md)
 * [Calibration Message](CalibrationMessage.md)
+* [Relay Message](RelayMessage.md)
 
 ## Process
 * [Component Cycle Message](ComponentCycleMessage.md)
@@ -31,6 +33,7 @@ Most of the message types in the Field Connect Data Standard are device-to-cloud
 * [Current Settings Message](CurrentSettingsMessage.md)
 * [Errors Message](ErrorsMessage.md)
 * [File Upload Message](EventMessage.md)
+* [System Test Message](SystemTestMessage.md)
 
 ## Meta-data
 * [Entity Tag Message](EntityTagMessage.md)

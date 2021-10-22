@@ -12,7 +12,7 @@
 
 Contains a string of the message type, as per the details in the individual message types specification. e.g. "SpotTelemetryMessage", "EventMessage"
 ### Spec
-```string``` = "1.2.1.0"
+```string``` = "1.2.3.1"
 
 Spec is important for versioning of message processing where breaking changes are made to the standard.
 ### DeviceId
@@ -20,7 +20,8 @@ Spec is important for versioning of message processing where breaking changes ar
 
 Uniquely identifies each device on IoT service. On Azure IoT Hub, this needs to match with the [DeviceId].
 
-Required where [Origin](#origin) in [1,2,3,4]
+#### Server-side validations
+1. Required where [Origin](#origin) in [1,2,3,4]
 
 ### MessageId
 ```Int32?```
@@ -37,6 +38,8 @@ Required where [Origin](#origin) = 2 or [Origin](#origin) = null
 * [Origin](#origin) ```Int32```
 * [Adjustments](#adjustments) ```object```
 * [ThingIdentifier](#thingidentifier) ```string```
+* [Processor](#processor) ```string```
+* [Upn](#upn) ```string```
 
 ### Tags
 ```string[]```
@@ -56,6 +59,10 @@ Standard origins are listed below. Others can be added as needed.
   5. Server-side near real-time
   6. Server-side cold analytics
   7. External systems
+  8. User
+
+#### Server-side validations
+1.	If [Origin](#origin) = 8: [Upn](#upn) is required.
 
 ### Adjustments
 ```object[]```
@@ -101,3 +108,19 @@ In the example below, a measurement value of null is sent, which is not possible
 Used when a single device can be used simulaneously or dynamically on multiple 'things'. For example, a PC (as a device) that is connected to multiple machines may need to record telemetry for each machine rather than as itself, or a laptop that is plugged in to different machines from time to time. Consider carefully when using this as it may be better to model a single 'thing' with multple components, rather than multiple 'things'. 
 
 Be aware that ThingIdentifier is only possible if the device is 'smart' enough to know about things or able to be remotely configured. Often the device only knows about itself, such as a room sensor device that knows it's deviceId, but has no context or knowledge about the room (as a thing). It most cases it is better to rely on server-side device management or fitment to know which device is associated to which 'thing'.
+
+#### Server-side validations
+1. Required where [Origin](#origin) >= 5 or [DeviceId](#deviceid) is null
+
+### Processor
+```string```
+
+When messages are derived or created server-side the Porcessor field contains details on the specific processor that generated the message. Could be a function name, or app url.
+
+### Upn
+```string```
+
+When telemetry is created by users, such as manual capturing of events or meter-read data, the upn of the user needs to be recorded against the data. The data standard does not specify authentication or authorisation mechanisms.
+
+#### Server-side validations
+1.	If [Upn](#upn) is not null: [Origin](#origin) must equal 8.

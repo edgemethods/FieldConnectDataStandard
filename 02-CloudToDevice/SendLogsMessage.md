@@ -17,7 +17,7 @@ Devices may store log data on the device that is unnecessary or too verbose to c
 ```string``` = "SendLogsMessage"
 
 ### Spec
-```string``` = "1.2.1.0"
+```string``` = "1.2.3.1"
 
 ### DeviceId
 ```string``` 
@@ -35,7 +35,7 @@ Devices may store log data on the device that is unnecessary or too verbose to c
 ```JSON
 {
   "DeviceId": "AF000012",
-  "Spec": "1.2.1.0",
+  "Spec": "1.2.3.1",
   "MessageType": "SendLogsMessage",
   "CreatedDateTime": "2018-03-12T12:40:42Z",
   "LogDateTimeFrom": "2018-03-12T00:00Z",

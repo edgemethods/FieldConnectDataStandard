@@ -15,7 +15,7 @@ Particularly with embedded software that is still in development or new, it is u
 ### MessageType
 ```string``` = "BasicDiagnosticMessage"
 ### Spec
-```string``` = "1.2.1.0"
+```string``` = "1.2.3.1"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -34,7 +34,7 @@ Particularly with embedded software that is still in development or new, it is u
 ```JSON
 {
   "MessageType": "BasicDiagnosticMessage",
-  "Spec": "1.2.1.0",
+  "Spec": "1.2.3.1",
   "DeviceId": "AB5489",
   "MessageId": 1091,
   "DateTime": "2016-03-12T12:40:42Z",
