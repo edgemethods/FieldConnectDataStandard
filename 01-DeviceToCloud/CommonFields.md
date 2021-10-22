@@ -5,7 +5,7 @@
 * [MessageType](#messagetype) ```string```
 * [Spec](#spec) ```string```
 * [DeviceId](#deviceid) ```string```
-* [MessageId](#messageid) ```Int32```
+* [MessageId](#messageid) ```Int32?```
 
 ### MessageType
 ```string``` 
@@ -23,7 +23,7 @@ Uniquely identifies each device on IoT service. On Azure IoT Hub, this needs to 
 Required where [Origin](#origin) in [1,2,3,4]
 
 ### MessageId
-```Int32```
+```Int32?```
 
 MessageId is a sequential counter of messages on the device. It can be duplicated (restart at 0, reset on firmware change), but is used for message ordering and fault identification, so ensuring that it is used correctly improves overall quality.
 
