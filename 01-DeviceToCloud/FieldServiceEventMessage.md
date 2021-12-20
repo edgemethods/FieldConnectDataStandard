@@ -71,6 +71,5 @@ Used to be able to filter or parse messages.
 }
 ```
 ## Server-side validations
-1. Either [ThingIdentifier](#thingidentifier) or [DeviceId](#deviceid) need to be non-null.
-2. [DateTime](#datetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
-3. [Upn](#upn): Required
+1. [DateTime](#datetime): Required. [Standard DateTime validation](../00-UsageNotes/DateTime-Formatting.md#standardddateTimevalidation).
+2. [Upn](#upn): Required
