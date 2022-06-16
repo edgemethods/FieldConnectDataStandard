@@ -19,7 +19,7 @@ While a device can upload a file anywhere, it is important that the chain of tru
 ### MessageType
 ```string``` = "FileUploadMessage"
 ### Spec
-```string``` = "1.2.3.1"
+```string``` = "1.2.3.2"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -45,7 +45,7 @@ _We have yet to receive a proposal for a property in the message such as "Overwr
 ```JSON
 {
   "MessageType": "FileUploadMessage",
-  "Spec": "1.2.3.1",
+  "Spec": "1.2.3.2",
   "DeviceId": "AF000002",
   "MessageId": 101,
   "Reason": "Calibration",

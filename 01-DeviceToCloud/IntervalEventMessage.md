@@ -17,7 +17,7 @@ When lots of similar events occur and the device either receives a count from an
 ### MessageType
 ```string``` = "IntervalEventMessage"
 ### Spec
-```string``` = "1.2.3.1"
+```string``` = "1.2.3.2"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -47,7 +47,7 @@ Required
 ```JSON
 {
   "DeviceId": "C0002",
-  "Spec": "1.2.3.1",
+  "Spec": "1.2.3.2",
   "MessageType": "IntervalEventMessage",
   "MessageId": 0,
   "Interval": {

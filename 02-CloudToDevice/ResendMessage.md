@@ -16,7 +16,7 @@ On devices that store previous messages (or are in a debug state to store data) 
 ```string``` = "ResendMessage"
 
 ### Spec
-```string``` = "1.2.3.1"
+```string``` = "1.2.3.2"
 
 ### DeviceId
 ```string``` 
@@ -33,7 +33,7 @@ Refers to as MessageId that may have been previously sent by the device.
 ```JSON
 {
   "DeviceId": "AF000012",
-  "Spec": "1.2.3.1",
+  "Spec": "1.2.3.2",
   "MessageType": "ResendMessage",
   "CreatedDateTime": "2016-03-12T12:40:42Z",
   "MessageId": 1289

@@ -17,7 +17,7 @@ For sending data about device-side tests, rather use a [Basic Diagnostic Message
 ### MessageType
 ```string``` = "SystemTestMessage"
 ### Spec
-```string``` = "1.2.3.1"
+```string``` = "1.2.3.2"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -38,7 +38,7 @@ Optional.
 ```JSON
 {
   "MessageType": "SystemTestMessage",
-  "Spec": "1.2.3.1",
+  "Spec": "1.2.3.2",
   "DeviceId": "AF-DEV-001",
   "DateTime": "2020-03-12T12:40:42Z",
   "ThingIdentifier": "AF000002",

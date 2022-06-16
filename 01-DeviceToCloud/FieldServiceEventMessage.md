@@ -19,7 +19,7 @@ Used to record a field service event when API or system access to field service 
 ### MessageType
 ```string``` = "FieldServiceEventMessage"
 ### Spec
-```string``` = "1.2.3.1"
+```string``` = "1.2.3.2"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -59,7 +59,7 @@ Used to be able to filter or parse messages.
 ```JSON
 {
   "MessageType": "FieldServiceEventMessage",
-  "Spec": "1.2.3.1",
+  "Spec": "1.2.3.2",
   "ThingIdentifier": "AF000002",
   "ServiceDateTime": "2020-03-12T12:40:42Z",
   "ComponentCode":"PrimaryPumpAssembly",

@@ -15,7 +15,7 @@ To record that a named human operator has performed an operation on a 'thing'. F
 ### MessageType
 ```string``` = "OperationMessage"
 ### Spec
-```string``` = "1.2.3.1"
+```string``` = "1.2.3.2"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -37,7 +37,7 @@ Optional and can be used to record the specific function, task, process, etc. th
 ```JSON
 {
   "MessageType": "OperationMessage",
-  "Spec": "1.2.3.1",
+  "Spec": "1.2.3.2",
   "DeviceId": "C000112",
   "MessageId": 401,
   "OperatorCode": "59483A",

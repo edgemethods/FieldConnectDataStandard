@@ -16,7 +16,7 @@ Tags an entity in the server-side digital twin. Usually created server-side but 
 ### MessageType
 ```string``` = "EntityTagMessage"
 ### Spec
-```string``` = "1.2.3.1"
+```string``` = "1.2.3.2"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -47,7 +47,7 @@ Optional
 ```JSON
 {
   "MessageType": "EntityTagMessage",
-  "Spec": "1.2.3.1",
+  "Spec": "1.2.3.2",
   "DeviceId": "C000112",
   "MessageId": 501,
   "Entity": "Device",

@@ -26,6 +26,7 @@ Spec is important for versioning of message processing where breaking changes ar
 * [ThingIdentifier](#thingidentifier) ```string```
 * [Processor](#processor) ```string```
 * [Upn](#upn) ```string```
+* [DataPolicyId](#dataPolicyId) ```string```
 * [Adjustments](#adjustments) ```object```
 
 ### DeviceId
@@ -95,6 +96,15 @@ When telemetry is created by users, such as manual capturing of events or meter-
 
 #### Server-side validations
 1.	If [Upn](#upn) is not null: [Origin](#origin) must equal 8.
+
+
+### DataPolicyId
+```string```
+
+Internet of Customer Things data policy that applies to the data.
+
+#### Server-side validations
+1.	If [DataPolicyId](#dataPolicyId) is not null:: Internet of Customer Things DataPolicy must be valid for the customer of the thing that the device is fitted to.
 
 ### Adjustments
 ```object[]```

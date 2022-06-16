@@ -21,7 +21,7 @@ Most of the time data changes that affect the thing are server-side activities, 
 ### MessageType
 ```string``` = "ThingAffectedLogMessage"
 ### Spec
-```string``` = "1.2.3.1"
+```string``` = "1.2.3.2"
 ### DeviceId
 ```string``` 
 ### MessageId
@@ -61,7 +61,7 @@ Used to be able to filter potentially long lists of affected log messages.
 ```JSON
 {
   "MessageType": "ThingAffectedLogMessage",
-  "Spec": "1.2.3.1",
+  "Spec": "1.2.3.2",
   "DeviceId": "AF-DEV-001",
   "DateTime": "2020-03-12T12:40:42Z",
   "ThingIdentifier": "AF000002",

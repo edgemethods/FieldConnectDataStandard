@@ -17,7 +17,7 @@ Used to instruct the device to change the frequency that data is transmitted.
 ```string``` = "TransmissionFrequencyMessage"
 
 ### Spec
-```string``` = "1.2.3.1"
+```string``` = "1.2.3.2"
 
 ### DeviceId
 ```string``` 
@@ -36,7 +36,7 @@ Frequency of the transmission in seconds
 ```JSON
 {
   "DeviceId": "AF000012",
-  "Spec": "1.2.3.1",
+  "Spec": "1.2.3.2",
   "MessageType": "TransmissionFrequencyMessage",
   "CreatedDateTime": "2018-03-12T12:40:42Z",
   "TransmissionType": "Primary",
