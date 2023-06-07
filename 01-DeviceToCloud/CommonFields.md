@@ -27,6 +27,8 @@ Spec is important for versioning of message processing where breaking changes ar
 * [Processor](#processor) ```string```
 * [Upn](#upn) ```string```
 * [DataPolicyId](#dataPolicyId) ```string```
+* [ScopedTags](#scopedtags) ```object```
+* [Identifiers](#identifiers) ```object```
 * [Adjustments](#adjustments) ```object```
 
 ### DeviceId
@@ -105,6 +107,83 @@ Internet of Customer Things data policy that applies to the data.
 
 #### Server-side validations
 1.	If [DataPolicyId](#dataPolicyId) is not null:: Internet of Customer Things DataPolicy must be valid for the customer of the thing that the device is fitted to.
+
+### Identifiers
+```object[]```
+
+Allows for identifiers as key-value pairs, that may or may not be unique, to be attached to a message for later processing. Example uses include:
+
+* Adding a token that can be used to access related data that is stored elsewhere
+* Adding a correlation identifier so that message processing can be tracked
+
+#### Format
+Array of Identifier object
+
+* Key ```string```
+* Value ```string```
+
+#### Example
+```JSON
+    "Identifiers" : {
+        {
+            "Key": "ScopedTagToken:Customer",
+            "Value": "5a9244c7-a071-97bb-ba7d-5a741770c96d"
+        },
+        {
+            "Key": "ConversationId",
+            "Value": "158bfc57-c994-959f-5863-30d48070e06c"
+        }        
+    }
+```
+#### Server-side validations
+1. [Identifiers](#identifiers) object is not required
+2. If [Identifiers](#identifiers) is not null:
+    
+    1. Key: Required. Cannot be null or empty string
+    2. Value: Required. Cannot be null or empty string
+
+### ScopedTags
+```object[]```
+
+ScopedTags allows for arbitrary key-value pairs to be attached to a message that can be processed by downstream services. They can be set of different 'scopes' which can be used for different behaviour based on security or origin scopes.
+
+There are other places where similar data can be attached to a message are listed below. Be considerate of which is the better option for a particular use case:
+1. Common fields [Tags](#tags)
+2. Component Structure Message component [Properties](ComponentStructureMessage.md#componentsproperties)
+
+#### Format
+Array of ScopedTag object
+
+* Key ```string```
+* Value ```string```
+* Scope ```string```
+
+#### Example
+```JSON
+    "ScopedTags": [
+        {
+            "Key": "ProjectCode",
+            "Value": "SecretProject5",
+            "Scope": "Customer"
+        },
+        {
+            "Key": "SampleId",
+            "Value": "DH3546",
+            "Scope": "Customer"
+        },
+        {
+            "Key": "ImagingAlgorithm",
+            "Value": "RJ45",
+        }
+    ]
+```
+#### Server-side validations
+1. [ScopedTags](#scopedtags) object is not required
+2. If [ScopedTags](#scopedtags) is not null:
+    
+    1. Key: Required. Cannot be null or empty string
+    2. Value: Required. Cannot be null or empty string
+    3. Scope: Optional.
 
 ### Adjustments
 ```object[]```

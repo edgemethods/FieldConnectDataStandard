@@ -33,3 +33,5 @@ Spec | Date      | Notes
 1.2.3.0 | 20 September 2021 | Changes on CommonFields to support user-generated telemetry
 1.2.3.1 | 19 October 2021 | Added FieldServiceEventMessage
 1.2.3.2 | 16 June 2022 | Added optional [DataPolicyId] to CommonFields
+1.2.3.3 | 6 January 2023 | Added [ScopedTags] and [Identifiers] to CommonFields
+1.2.3.4 | January 2023 | Data processed message
